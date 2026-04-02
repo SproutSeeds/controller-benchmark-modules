@@ -1,0 +1,29 @@
+{
+  "study_family_id": "ohnishi_2014",
+  "source_kind": "study_specific_rule",
+  "rule_summary": "Study-specific compiler rules for Ohnishi 2014 as the current strongest direct hazard family. These rules preserve that the study is termination- and outcome-oriented rather than a temporal safety calibration dataset, while still making it the benchmark's clearest hard stop-rule anchor.",
+  "conditions": [
+    {
+      "condition_id": "VITA_CTRL_006",
+      "study_family_id": "ohnishi_2014",
+      "phase_layer": "hazard_stop_rule_negative_family",
+      "evidence_modes_present": [
+        "hazard_outcome_support"
+      ],
+      "age_signal_score": 0.67,
+      "identity_pressure_level": "high",
+      "risk_pressure_level": "high",
+      "active_negative_family_ids": [
+        "ohnishi_premature_termination_tumor_hazard"
+      ],
+      "condition_summary": "Direct hazard family tied to tumor outcome pressure under premature reprogramming termination.",
+      "source_locators": [
+        "GSE51786",
+        "Endpoint-only variable Dox duration to tumor outcome design",
+        "Premature termination / incomplete reprogramming hazard family",
+        "Tier A hazard-blocker anchor"
+      ],
+      "rule_basis": "Treat Ohnishi as the benchmark's strongest public direct hazard-outcome family. It should hard-block promotion, while preserving the boundary that it is an outcome-pressure anchor rather than a late-phase single-cell temporal calibration set."
+    }
+  ]
+}

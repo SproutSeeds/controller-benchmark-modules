@@ -1,0 +1,11 @@
+study_family_id,accession_bundle,primary_modality,temporal_coverage,phase_coverage,role_in_shell,notes
+sarkar_2020,"GSE142439;PRJNA598923",bulk,"day_4_only",initiation,corpus_anchor,"Initiation-only bulk family; useful as age-movement context but weak for heterogeneity claims."
+gill_2022,"GSE165180",sorted_bulk,"days_0_10_13_15_17",maturation,corpus_anchor,"Late-phase sorted-bulk family; temporally strong but subpopulation-limited."
+olova_ohnuki,"GSE54848",bulk,"days_0_to_49_regular_intervals",full_trajectory,corpus_anchor,"Bulk trajectory family with long-window age-linked movement and identity-loss pressure."
+roux_2022_sc,"GSE176206",single_cell,"day_6_snapshot_after_3_day_pulse_and_3_day_chase",initiation,corpus_anchor,"Single-cell initiation snapshot with pseudotime support."
+roux_2022_bulk,"GSE197437",bulk,"days_1_3_4_5_6_8",initiation,corpus_anchor,"Bulk companion family in C2C12; useful temporal scaffold but not heterogeneity-resolving."
+ohnishi_2014,"GSE51786",bulk_endpoint,"endpoint_only_variable_dox_to_tumor",termination,negative_family_anchor,"Termination / tumor-hazard family used for hard stop-rule pressure."
+human_full_reprog_d14,"GSE242423",single_cell,"days_0_2_4_6_8_10_12_14_plus_ipsc",later_intermediate,opponent_anchor,"Human full-reprogramming single-cell trajectory used as opponent calibration."
+human_full_reprog_pooled,"GSE150311",single_cell,"pooled_intermediate_snapshots",later_intermediate,opponent_anchor,"Human primed and naive pooled intermediates used as opponent calibration."
+human_full_reprog_day21,"GSE150637",single_cell,"day_21_snapshot",late_escape,opponent_anchor,"Late human full-reprogramming state used as opponent calibration."
+panariello_2024,"GSE221739",single_cell,"later_intermediate_time_course",later_intermediate,opponent_anchor,"Later intermediate human reprogramming resource extending opponent coverage."

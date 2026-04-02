@@ -1,0 +1,58 @@
+{
+  "name": "controller-benchmark-schemas",
+  "version": "0.1.0",
+  "description": "Schemas and validators for benchmark condition records, compiler receipts, and trust-boundary artifacts.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SproutSeeds/controller-benchmark-modules.git",
+    "directory": "packages/controller-benchmark-schemas"
+  },
+  "homepage": "https://github.com/SproutSeeds/controller-benchmark-modules/tree/main/packages/controller-benchmark-schemas",
+  "bugs": {
+    "url": "https://github.com/SproutSeeds/controller-benchmark-modules/issues"
+  },
+  "type": "module",
+  "main": "./src/index.js",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.js",
+    "./validators": "./src/validators.js",
+    "./schemas/condition-record": "./schemas/condition-record.schema.json",
+    "./schemas/condition-record-compile-receipt": "./schemas/condition-record-compile-receipt.schema.json",
+    "./schemas/benchmark-shell-receipt": "./schemas/benchmark-shell-receipt.schema.json",
+    "./schemas/compiler-coverage-trust-receipt": "./schemas/compiler-coverage-trust-receipt.schema.json"
+  },
+  "files": [
+    "src",
+    "schemas",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepublishOnly": "npm test && npm pack --dry-run",
+    "test": "node --test",
+    "pack:check": "npm pack --dry-run",
+    "release:check": "npm test && npm pack --dry-run"
+  },
+  "author": "SproutSeeds <cody@frg.earth>",
+  "keywords": [
+    "benchmark",
+    "condition-record",
+    "controller",
+    "evidence",
+    "json-schema",
+    "provenance",
+    "receipts",
+    "schemas",
+    "trust-boundary",
+    "validation"
+  ]
+}

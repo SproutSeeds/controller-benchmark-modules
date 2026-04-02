@@ -1,0 +1,27 @@
+{
+  "study_family_id": "sarkar_2020",
+  "source_kind": "study_specific_rule",
+  "rule_summary": "Study-specific compiler rules for Sarkar 2020 as an initiation-only bulk context family. These rules preserve that the family contributes bounded early age-movement context but does not earn heterogeneity-resolving authority.",
+  "conditions": [
+    {
+      "condition_id": "VITA_CTRL_001",
+      "study_family_id": "sarkar_2020",
+      "phase_layer": "initiation_phase_heterogeneity",
+      "evidence_modes_present": [
+        "bulk_proxy_support"
+      ],
+      "age_signal_score": 0.61,
+      "identity_pressure_level": "unresolved",
+      "risk_pressure_level": "unresolved",
+      "active_negative_family_ids": [],
+      "condition_summary": "Sarkar initiation-only bulk condition used as early age-movement context without heterogeneity resolution.",
+      "source_locators": [
+        "GSE142439",
+        "PRJNA598923",
+        "Day-4-only initiation bulk readout",
+        "Early age-movement context without subpopulation resolution"
+      ],
+      "rule_basis": "Treat Sarkar as a bounded initiation-phase context family: useful for early age-linked movement, but too coarse to support heterogeneity-sensitive identity or risk claims on its own."
+    }
+  ]
+}

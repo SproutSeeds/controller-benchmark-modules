@@ -1,0 +1,159 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://frg.earth/schemas/controller-benchmark-schemas/compiler-coverage-trust-receipt.schema.json",
+  "title": "Compiler Coverage And Trust Receipt",
+  "description": "Receipt describing which benchmark conditions are rule-backed, which remain fixture-backed, and where bounded manual judgment still exists.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_name",
+    "generated_on",
+    "script_path",
+    "inputs",
+    "outputs",
+    "condition_count",
+    "source_kind_counts",
+    "rule_backed_condition_count",
+    "fixture_backed_condition_count",
+    "rule_backed_condition_ids",
+    "fixture_backed_condition_ids",
+    "common_bounded_manual_judgment_fields",
+    "common_derived_fields",
+    "common_matrix_extracted_fields",
+    "trust_boundary_claim",
+    "coverage_verdict",
+    "condition_rows"
+  ],
+  "properties": {
+    "artifact_name": { "type": "string" },
+    "generated_on": { "type": "string" },
+    "script_path": { "type": "string" },
+    "inputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "study_corpus",
+        "negative_families",
+        "conditions",
+        "compiler_rules_dir"
+      ],
+      "properties": {
+        "study_corpus": { "type": "string" },
+        "negative_families": { "type": "string" },
+        "conditions": { "type": "string" },
+        "compiler_rules_dir": { "type": "string" }
+      }
+    },
+    "outputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "condition_records",
+        "coverage_trust_receipt"
+      ],
+      "properties": {
+        "condition_records": { "type": "string" },
+        "coverage_trust_receipt": { "type": "string" }
+      }
+    },
+    "condition_count": { "type": "number" },
+    "source_kind_counts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "number"
+      }
+    },
+    "rule_backed_condition_count": { "type": "number" },
+    "fixture_backed_condition_count": { "type": "number" },
+    "rule_backed_condition_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "fixture_backed_condition_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "common_bounded_manual_judgment_fields": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "common_derived_fields": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "common_matrix_extracted_fields": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "trust_boundary_claim": { "type": "string" },
+    "coverage_verdict": { "type": "string" },
+    "condition_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "condition_id",
+          "study_family_id",
+          "source_kind",
+          "trust_status",
+          "traceable_support",
+          "bounded_manual_judgment_fields",
+          "derived_fields",
+          "matrix_extracted_fields",
+          "compiler_trust_notes",
+          "condition_summary"
+        ],
+        "properties": {
+          "condition_id": { "type": "string" },
+          "study_family_id": { "type": "string" },
+          "source_kind": {
+            "type": "string",
+            "enum": [
+              "study_specific_rule",
+              "frozen_fixture",
+              "curated_manual",
+              "accession_derived",
+              "mixed"
+            ]
+          },
+          "trust_status": { "type": "string" },
+          "traceable_support": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "study_family_id",
+              "accession_bundle",
+              "derived_from"
+            ],
+            "properties": {
+              "study_family_id": { "type": "string" },
+              "accession_bundle": { "type": "string" },
+              "derived_from": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          },
+          "bounded_manual_judgment_fields": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "derived_fields": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "matrix_extracted_fields": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "compiler_trust_notes": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "condition_summary": { "type": "string" }
+        }
+      }
+    }
+  }
+}

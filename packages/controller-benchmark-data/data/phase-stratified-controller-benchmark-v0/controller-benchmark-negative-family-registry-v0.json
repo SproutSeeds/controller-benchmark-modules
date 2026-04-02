@@ -1,0 +1,34 @@
+[
+  {
+    "family_id": "ohnishi_premature_termination_tumor_hazard",
+    "role_type": "hazard_blocker",
+    "confidence_tier": "Tier A",
+    "strongest_sources": ["GSE51786"],
+    "phase_relevance": "termination / late hazard",
+    "required_controller_behavior": "never promote as admissible; hard hazard veto"
+  },
+  {
+    "family_id": "roux_identity_suppressed_partial_reprogramming",
+    "role_type": "identity_blocker",
+    "confidence_tier": "Tier A",
+    "strongest_sources": ["GSE176206", "GSE197437"],
+    "phase_relevance": "initiation",
+    "required_controller_behavior": "never promote as lineage-preserving rejuvenation"
+  },
+  {
+    "family_id": "gill_failing_fraction_late_reprogramming",
+    "role_type": "identity_blocker",
+    "confidence_tier": "Tier B",
+    "strongest_sources": ["GSE165180"],
+    "phase_relevance": "maturation",
+    "required_controller_behavior": "downgrade or abstain; do not certify as safe rejuvenation"
+  },
+  {
+    "family_id": "full_reprogramming_pluripotency_escape",
+    "role_type": "opponent_calibration",
+    "confidence_tier": "Tier C",
+    "strongest_sources": ["GSE242423", "GSE150311", "GSE150637"],
+    "phase_relevance": "later intermediate / full reprogramming",
+    "required_controller_behavior": "downgrade or abstain; use as opponent boundary calibration"
+  }
+]

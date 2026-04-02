@@ -1,0 +1,46 @@
+{
+  "artifact_name": "controller-benchmark-shell-receipt-v0",
+  "executed_on": "2026-04-02T15:58:03.726593+00:00",
+  "script_path": "repo:/programs/partial-reprogramming-controller/scripts/controller_phase_stratified_benchmark_runner.py",
+  "inputs": {
+    "study_corpus": "repo:/programs/partial-reprogramming-controller/benchmarks/phase-stratified-controller-benchmark-v0/controller-benchmark-study-corpus-v0.csv",
+    "negative_families": "repo:/programs/partial-reprogramming-controller/benchmarks/phase-stratified-controller-benchmark-v0/controller-benchmark-negative-family-registry-v0.json",
+    "condition_records": "repo:/programs/partial-reprogramming-controller/benchmarks/phase-stratified-controller-benchmark-v0/controller-benchmark-condition-records-v0.jsonl",
+    "compile_receipt": "repo:/programs/partial-reprogramming-controller/benchmarks/phase-stratified-controller-benchmark-v0/controller-benchmark-condition-record-compile-receipt-v0.json"
+  },
+  "outputs": {
+    "age_only_output": "repo:/programs/partial-reprogramming-controller/benchmarks/phase-stratified-controller-benchmark-v0/controller-benchmark-age-only-baseline-outputs-v0.csv",
+    "controller_output": "repo:/programs/partial-reprogramming-controller/benchmarks/phase-stratified-controller-benchmark-v0/controller-benchmark-controller-outputs-v0.csv",
+    "receipt": "repo:/programs/partial-reprogramming-controller/benchmarks/phase-stratified-controller-benchmark-v0/controller-benchmark-shell-receipt-v0.json"
+  },
+  "condition_count": 8,
+  "source_kind_counts": {
+    "study_specific_rule": 8
+  },
+  "summary": {
+    "condition_count": 8,
+    "baseline_output_counts": {
+      "downgrade": 1,
+      "promote": 7
+    },
+    "controller_output_counts": {
+      "insufficient_evidence": 1,
+      "hazard_blocked": 2,
+      "promote": 1,
+      "downgrade": 3,
+      "abstain": 1
+    },
+    "baseline_promoted_negative_conditions": [
+      "VITA_CTRL_002",
+      "VITA_CTRL_004",
+      "VITA_CTRL_006",
+      "VITA_CTRL_007"
+    ],
+    "controller_promoted_negative_conditions": [],
+    "controller_hazard_blocked_conditions": [
+      "VITA_CTRL_002",
+      "VITA_CTRL_006"
+    ],
+    "shell_claim": "This shell demonstrates executable benchmark structure and fail-closed logic. It does not claim biological validation of the controller."
+  }
+}

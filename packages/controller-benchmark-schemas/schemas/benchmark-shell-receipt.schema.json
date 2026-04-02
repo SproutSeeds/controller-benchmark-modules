@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://frg.earth/schemas/controller-benchmark-schemas/benchmark-shell-receipt.schema.json",
+  "title": "Benchmark Shell Receipt",
+  "description": "Receipt emitted by the benchmark shell after evaluating compiled condition records.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_name",
+    "executed_on",
+    "script_path",
+    "inputs",
+    "outputs",
+    "condition_count",
+    "source_kind_counts",
+    "summary"
+  ],
+  "properties": {
+    "artifact_name": { "type": "string" },
+    "executed_on": { "type": "string" },
+    "script_path": { "type": "string" },
+    "inputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "study_corpus",
+        "negative_families",
+        "condition_records",
+        "compile_receipt"
+      ],
+      "properties": {
+        "study_corpus": { "type": "string" },
+        "negative_families": { "type": "string" },
+        "condition_records": { "type": "string" },
+        "compile_receipt": { "type": "string" }
+      }
+    },
+    "outputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "age_only_output",
+        "controller_output",
+        "receipt"
+      ],
+      "properties": {
+        "age_only_output": { "type": "string" },
+        "controller_output": { "type": "string" },
+        "receipt": { "type": "string" }
+      }
+    },
+    "condition_count": { "type": "number" },
+    "source_kind_counts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "number"
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "condition_count",
+        "baseline_output_counts",
+        "controller_output_counts",
+        "baseline_promoted_negative_conditions",
+        "controller_promoted_negative_conditions",
+        "controller_hazard_blocked_conditions",
+        "shell_claim"
+      ],
+      "properties": {
+        "condition_count": { "type": "number" },
+        "baseline_output_counts": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          }
+        },
+        "controller_output_counts": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          }
+        },
+        "baseline_promoted_negative_conditions": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "controller_promoted_negative_conditions": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "controller_hazard_blocked_conditions": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "shell_claim": { "type": "string" }
+      }
+    }
+  }
+}

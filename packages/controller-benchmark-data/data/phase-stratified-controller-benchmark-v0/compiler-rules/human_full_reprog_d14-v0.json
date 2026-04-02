@@ -1,0 +1,44 @@
+{
+  "study_family_id": "human_full_reprog_d14",
+  "source_kind": "study_specific_rule",
+  "rule_summary": "Study-specific compiler rules for the human day-14 full-reprogramming opponent family. These rules preserve that the family is useful as an opponent-calibration boundary against pluripotency escape rather than as direct partial-reprogramming safety evidence.",
+  "manual_judgment_fields": [
+    "phase_layer",
+    "evidence_modes_present",
+    "age_signal_score",
+    "identity_pressure_level",
+    "risk_pressure_level",
+    "active_negative_family_ids",
+    "condition_summary"
+  ],
+  "compiler_trust_notes": [
+    "This family is now carried by a dedicated study-specific rule pack rather than the global fixture.",
+    "The opponent-boundary interpretation is still a bounded human judgment encoded in the rule pack, not a direct matrix-derived extraction result.",
+    "The family should pressure controller boundary discipline against pluripotency escape, not be treated as direct partial-reprogramming admissibility evidence."
+  ],
+  "conditions": [
+    {
+      "condition_id": "VITA_CTRL_007",
+      "study_family_id": "human_full_reprog_d14",
+      "phase_layer": "initiation_phase_heterogeneity",
+      "evidence_modes_present": [
+        "single_cell_snapshot_heterogeneity",
+        "opponent_calibration_support"
+      ],
+      "age_signal_score": 0.91,
+      "identity_pressure_level": "high",
+      "risk_pressure_level": "moderate",
+      "active_negative_family_ids": [
+        "full_reprogramming_pluripotency_escape"
+      ],
+      "condition_summary": "Human full-reprogramming opponent family used to pressure boundary discipline against pluripotency escape.",
+      "source_locators": [
+        "GSE242423",
+        "Day-14 human single-cell later-intermediate reprogramming state",
+        "Opponent-calibration boundary against pluripotency escape",
+        "Full-reprogramming comparison family rather than partial-reprogramming safety anchor"
+      ],
+      "rule_basis": "Treat the human day-14 full-reprogramming single-cell family as the benchmark's cleanest current opponent-calibration boundary: useful for pressure-testing false wins and pluripotency drift, but not direct evidence that a partial-reprogramming condition is safe or admissible."
+    }
+  ]
+}

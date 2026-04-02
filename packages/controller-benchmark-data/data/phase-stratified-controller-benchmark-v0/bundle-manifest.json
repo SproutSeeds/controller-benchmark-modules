@@ -1,0 +1,66 @@
+{
+  "bundle_id": "phase-stratified-controller-benchmark-v0",
+  "package_name": "controller-benchmark-data",
+  "package_version": "0.1.0",
+  "benchmark_name": "Phase-stratified controller benchmark bundle",
+  "description": "Versioned benchmark bundle for the phase-stratified, abstention-capable controller shell.",
+  "generated_on": "2026-04-02T18:53:34.354Z",
+  "condition_count": 8,
+  "rule_backed_condition_count": 8,
+  "coverage_verdict": "all_live_conditions_rule_backed",
+  "artifacts": {
+    "studyCorpus": {
+      "path": "controller-benchmark-study-corpus-v0.csv",
+      "format": "csv",
+      "role": "benchmark_input"
+    },
+    "negativeFamilyRegistry": {
+      "path": "controller-benchmark-negative-family-registry-v0.json",
+      "format": "json",
+      "role": "benchmark_input"
+    },
+    "conditionFixture": {
+      "path": "controller-benchmark-condition-fixture-v0.jsonl",
+      "format": "jsonl",
+      "role": "historical_compile_input"
+    },
+    "conditionRecords": {
+      "path": "controller-benchmark-condition-records-v0.jsonl",
+      "format": "jsonl",
+      "role": "live_benchmark_object"
+    },
+    "compileReceipt": {
+      "path": "controller-benchmark-condition-record-compile-receipt-v0.json",
+      "format": "json",
+      "role": "compile_receipt"
+    },
+    "coverageTrustReceipt": {
+      "path": "controller-benchmark-compiler-coverage-trust-receipt-v0.json",
+      "format": "json",
+      "role": "trust_receipt"
+    },
+    "ageOnlyBaselineOutput": {
+      "path": "controller-benchmark-age-only-baseline-outputs-v0.csv",
+      "format": "csv",
+      "role": "benchmark_output"
+    },
+    "controllerOutput": {
+      "path": "controller-benchmark-controller-outputs-v0.csv",
+      "format": "csv",
+      "role": "benchmark_output"
+    },
+    "benchmarkShellReceipt": {
+      "path": "controller-benchmark-shell-receipt-v0.json",
+      "format": "json",
+      "role": "benchmark_receipt"
+    }
+  },
+  "compiler_rules": [
+    "gill_2022-v0",
+    "human_full_reprog_d14-v0",
+    "ohnishi_2014-v0",
+    "olova_ohnuki-v0",
+    "roux_2022_sc-v0",
+    "sarkar_2020-v0"
+  ]
+}

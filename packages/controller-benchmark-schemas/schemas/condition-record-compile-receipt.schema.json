@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://frg.earth/schemas/controller-benchmark-schemas/condition-record-compile-receipt.schema.json",
+  "title": "Condition Record Compile Receipt",
+  "description": "Receipt emitted by a condition-record compiler before benchmark shell scoring runs.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_name",
+    "compiled_on",
+    "script_path",
+    "inputs",
+    "outputs",
+    "condition_fixture_count",
+    "compiled_condition_record_count",
+    "source_kind_counts",
+    "claim"
+  ],
+  "properties": {
+    "artifact_name": { "type": "string" },
+    "compiled_on": { "type": "string" },
+    "script_path": { "type": "string" },
+    "inputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "study_corpus",
+        "negative_families",
+        "conditions",
+        "compiler_rules_dir"
+      ],
+      "properties": {
+        "study_corpus": { "type": "string" },
+        "negative_families": { "type": "string" },
+        "conditions": { "type": "string" },
+        "compiler_rules_dir": { "type": "string" }
+      }
+    },
+    "outputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "condition_records",
+        "receipt",
+        "coverage_trust_receipt"
+      ],
+      "properties": {
+        "condition_records": { "type": "string" },
+        "receipt": { "type": "string" },
+        "coverage_trust_receipt": { "type": "string" }
+      }
+    },
+    "condition_fixture_count": { "type": "number" },
+    "compiled_condition_record_count": { "type": "number" },
+    "source_kind_counts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "number"
+      }
+    },
+    "claim": { "type": "string" }
+  }
+}

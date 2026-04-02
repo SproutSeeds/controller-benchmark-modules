@@ -1,0 +1,69 @@
+{
+  "study_family_id": "gill_2022",
+  "source_kind": "study_specific_rule",
+  "rule_summary": "Study-specific compiler rules for Gill 2022 sorted-bulk maturation-phase conditions. These rules preserve the stronger temporal structure and the successful-versus-failing branch distinction without pretending the family is single-cell.",
+  "conditions": [
+    {
+      "condition_id": "VITA_CTRL_003",
+      "study_family_id": "gill_2022",
+      "phase_layer": "maturation_phase_bulk_plus_abstention",
+      "evidence_modes_present": [
+        "observed_temporal",
+        "bulk_proxy_support"
+      ],
+      "age_signal_score": 0.83,
+      "identity_pressure_level": "low",
+      "risk_pressure_level": "low",
+      "active_negative_family_ids": [],
+      "condition_summary": "Gill successful maturation branch with real later-phase timing and relatively favorable proxy identity profile.",
+      "source_locators": [
+        "GSE165180",
+        "Days 10, 13, 15, and 17 later-phase sorted-bulk readout",
+        "CD13-/SSEA4+ successful reprogramming fraction"
+      ],
+      "rule_basis": "Treat the successful sorted fraction as the strongest current maturation-phase positive family, while still preserving bulk-limited uncertainty through the supporting evidence class."
+    },
+    {
+      "condition_id": "VITA_CTRL_004",
+      "study_family_id": "gill_2022",
+      "phase_layer": "maturation_phase_bulk_plus_abstention",
+      "evidence_modes_present": [
+        "observed_temporal",
+        "bulk_proxy_support"
+      ],
+      "age_signal_score": 0.7,
+      "identity_pressure_level": "high",
+      "risk_pressure_level": "moderate",
+      "active_negative_family_ids": [
+        "gill_failing_fraction_late_reprogramming"
+      ],
+      "condition_summary": "Gill failing fraction in the maturation window; negative pressure case inside the same family.",
+      "source_locators": [
+        "GSE165180",
+        "Days 10, 13, 15, and 17 later-phase sorted-bulk readout",
+        "CD13+/SSEA4- failing fraction"
+      ],
+      "rule_basis": "Treat the failing sorted fraction as the strongest current maturation-phase negative family within the same study context as the positive-looking branch."
+    },
+    {
+      "condition_id": "VITA_CTRL_008",
+      "study_family_id": "gill_2022",
+      "phase_layer": "maturation_phase_bulk_plus_abstention",
+      "evidence_modes_present": [
+        "observed_temporal",
+        "bulk_proxy_support"
+      ],
+      "age_signal_score": 0.77,
+      "identity_pressure_level": "moderate",
+      "risk_pressure_level": "low",
+      "active_negative_family_ids": [],
+      "condition_summary": "Gill maturation condition with age-linked improvement but nontrivial identity pressure that should resist clean promotion.",
+      "source_locators": [
+        "GSE165180",
+        "Later-phase sorted-bulk maturation context",
+        "Intermediate-pressure boundary case between successful and failing branches"
+      ],
+      "rule_basis": "Preserve a medium-pressure maturation condition so the benchmark can demonstrate downgrade versus abstention behavior between the clearly favorable and clearly failing Gill branches."
+    }
+  ]
+}

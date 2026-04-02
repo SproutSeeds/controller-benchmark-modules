@@ -1,0 +1,28 @@
+{
+  "study_family_id": "olova_ohnuki",
+  "source_kind": "study_specific_rule",
+  "rule_summary": "Study-specific compiler rules for the Olova / Ohnuki long-window bulk trajectory family. These rules preserve that the family is one of the benchmark's strongest current age-linked temporal anchors, while still forcing abstention-capable interpretation because late identity and risk remain bulk-limited.",
+  "conditions": [
+    {
+      "condition_id": "VITA_CTRL_005",
+      "study_family_id": "olova_ohnuki",
+      "phase_layer": "maturation_phase_bulk_plus_abstention",
+      "evidence_modes_present": [
+        "observed_temporal",
+        "bulk_proxy_support"
+      ],
+      "age_signal_score": 0.88,
+      "identity_pressure_level": "unresolved",
+      "risk_pressure_level": "unresolved",
+      "active_negative_family_ids": [],
+      "condition_summary": "Long-window bulk trajectory with strong age movement but coarse late-phase identity and risk support.",
+      "source_locators": [
+        "GSE54848",
+        "Days 0 to 49 regular-interval bulk trajectory",
+        "Long-window age-linked movement under reprogramming progression",
+        "Bulk-only late identity and risk support"
+      ],
+      "rule_basis": "Treat Olova / Ohnuki as the benchmark's strongest long-window maturation bulk family for age-linked movement, while preserving explicit abstention pressure because late identity retention and risk do not resolve at single-cell level."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "study_family_id": "roux_2022_sc",
+  "source_kind": "study_specific_rule",
+  "rule_summary": "Study-specific compiler rules for the Roux 2022 single-cell initiation snapshot. These rules preserve that the family is heterogeneity-resolving but still initiation-limited and pseudotime-supported rather than duration-authoritative.",
+  "conditions": [
+    {
+      "condition_id": "VITA_CTRL_002",
+      "study_family_id": "roux_2022_sc",
+      "phase_layer": "initiation_phase_heterogeneity",
+      "evidence_modes_present": [
+        "single_cell_snapshot_heterogeneity",
+        "pseudotime_support"
+      ],
+      "age_signal_score": 0.72,
+      "identity_pressure_level": "high",
+      "risk_pressure_level": "moderate",
+      "active_negative_family_ids": [
+        "roux_identity_suppressed_partial_reprogramming"
+      ],
+      "condition_summary": "Roux day-6 single-cell initiation snapshot with youthful movement entangled with identity suppression.",
+      "source_locators": [
+        "GSE176206",
+        "Day-6 single-cell snapshot after 3-day pulse plus 3-day chase",
+        "Pseudotime-supported local ordering inside the initiation window",
+        "Identity-suppressed partial-reprogramming negative family"
+      ],
+      "rule_basis": "Treat the Roux single-cell arm as the strongest current initiation-phase heterogeneity family for false-win pressure, while explicitly preserving that pseudotime is local-ordering support and not real late-phase temporal calibration."
+    }
+  ]
+}

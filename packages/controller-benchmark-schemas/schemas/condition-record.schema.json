@@ -1,0 +1,210 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://frg.earth/schemas/controller-benchmark-schemas/condition-record.schema.json",
+  "title": "Controller Benchmark Condition Record",
+  "description": "Stable machine-readable shape for one benchmarked condition inside an abstention-capable controller benchmark.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "condition_id",
+    "study_family_id",
+    "accession_bundle",
+    "phase_layer",
+    "primary_evidence_class",
+    "supporting_evidence_classes",
+    "age_signal_score",
+    "age_signal_status",
+    "identity_pressure_level",
+    "identity_status",
+    "risk_pressure_level",
+    "risk_status",
+    "active_negative_family_ids",
+    "negative_family_roles",
+    "negative_family_tiers",
+    "condition_summary",
+    "source_trace",
+    "provenance"
+  ],
+  "properties": {
+    "condition_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "study_family_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "accession_bundle": {
+      "type": "string",
+      "minLength": 1
+    },
+    "phase_layer": {
+      "type": "string",
+      "enum": [
+        "initiation_phase_heterogeneity",
+        "maturation_phase_bulk_plus_abstention",
+        "hazard_stop_rule_negative_family"
+      ]
+    },
+    "primary_evidence_class": {
+      "type": "string",
+      "enum": [
+        "observed_temporal",
+        "single_cell_snapshot_heterogeneity",
+        "pseudotime_support",
+        "bulk_proxy_support",
+        "hazard_outcome_support",
+        "opponent_calibration_support"
+      ]
+    },
+    "supporting_evidence_classes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "observed_temporal",
+          "single_cell_snapshot_heterogeneity",
+          "pseudotime_support",
+          "bulk_proxy_support",
+          "hazard_outcome_support",
+          "opponent_calibration_support"
+        ]
+      }
+    },
+    "age_signal_score": {
+      "type": "number"
+    },
+    "age_signal_status": {
+      "type": "string",
+      "enum": [
+        "strong_positive",
+        "moderate_positive",
+        "weak_positive",
+        "not_earned"
+      ]
+    },
+    "identity_pressure_level": {
+      "type": "string",
+      "enum": [
+        "low",
+        "moderate",
+        "high",
+        "unresolved"
+      ]
+    },
+    "identity_status": {
+      "type": "string",
+      "enum": [
+        "bounded_support",
+        "pressured",
+        "blocked_pressure",
+        "unresolved"
+      ]
+    },
+    "risk_pressure_level": {
+      "type": "string",
+      "enum": [
+        "low",
+        "moderate",
+        "high",
+        "unresolved"
+      ]
+    },
+    "risk_status": {
+      "type": "string",
+      "enum": [
+        "bounded_support",
+        "pressured",
+        "blocked_pressure",
+        "unresolved"
+      ]
+    },
+    "active_negative_family_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "negative_family_roles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "negative_family_tiers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "condition_summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_trace": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_kind",
+        "derived_from"
+      ],
+      "properties": {
+        "source_kind": {
+          "type": "string",
+          "enum": [
+            "study_specific_rule",
+            "frozen_fixture",
+            "curated_manual",
+            "accession_derived",
+            "mixed"
+          ]
+        },
+        "derived_from": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "reviewer",
+        "status"
+      ],
+      "properties": {
+        "reviewer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reviewed_on": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "draft",
+            "reviewed",
+            "accepted",
+            "superseded"
+          ]
+        },
+        "benchmark_links": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
