@@ -38,8 +38,8 @@ It is not the place for:
 ## Current Status
 
 - public repo home is live
-- the first three benchmark packages are published on npm at `0.1.0`
-- the umbrella package is being added as the one-install public entry point
+- the benchmark package stack is published on npm at `0.1.0`
+- `controller-benchmark` is the one-install public entry point
 
 ## Install Targets
 
