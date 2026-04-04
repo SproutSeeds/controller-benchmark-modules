@@ -1,6 +1,6 @@
 {
   "artifact_name": "controller-benchmark-passive-recommendation-scaffold-v0",
-  "generated_on": "2026-04-04T04:00:57.378014+00:00",
+  "generated_on": "2026-04-04T05:07:49.814934+00:00",
   "script_path": "repo:/programs/partial-reprogramming-controller/scripts/controller_benchmark_build_passive_recommendation_scaffold.py",
   "inputs": {
     "condition_records": "repo:/programs/partial-reprogramming-controller/benchmarks/phase-stratified-controller-benchmark-v0/controller-benchmark-condition-records-v0.jsonl",
@@ -48,7 +48,7 @@
   },
   "protocol_objects": [
     {
-      "protocol_object_id": "VITA-PR-VITA_CTRL_001",
+      "protocol_object_id": "CTRL-PR-VITA_CTRL_001",
       "anchor_condition_ids": [
         "VITA_CTRL_001"
       ],
@@ -112,7 +112,7 @@
       }
     },
     {
-      "protocol_object_id": "VITA-PR-VITA_CTRL_002",
+      "protocol_object_id": "CTRL-PR-VITA_CTRL_002",
       "anchor_condition_ids": [
         "VITA_CTRL_002"
       ],
@@ -193,7 +193,7 @@
       }
     },
     {
-      "protocol_object_id": "VITA-PR-VITA_CTRL_003",
+      "protocol_object_id": "CTRL-PR-VITA_CTRL_003",
       "anchor_condition_ids": [
         "VITA_CTRL_003"
       ],
@@ -277,7 +277,7 @@
       }
     },
     {
-      "protocol_object_id": "VITA-PR-VITA_CTRL_004",
+      "protocol_object_id": "CTRL-PR-VITA_CTRL_004",
       "anchor_condition_ids": [
         "VITA_CTRL_004"
       ],
@@ -366,7 +366,7 @@
       }
     },
     {
-      "protocol_object_id": "VITA-PR-VITA_CTRL_008",
+      "protocol_object_id": "CTRL-PR-VITA_CTRL_008",
       "anchor_condition_ids": [
         "VITA_CTRL_008"
       ],
@@ -452,7 +452,7 @@
       }
     },
     {
-      "protocol_object_id": "VITA-PR-VITA_CTRL_005",
+      "protocol_object_id": "CTRL-PR-VITA_CTRL_005",
       "anchor_condition_ids": [
         "VITA_CTRL_005"
       ],
@@ -537,7 +537,7 @@
       }
     },
     {
-      "protocol_object_id": "VITA-PR-VITA_CTRL_006",
+      "protocol_object_id": "CTRL-PR-VITA_CTRL_006",
       "anchor_condition_ids": [
         "VITA_CTRL_006"
       ],
@@ -603,7 +603,7 @@
       }
     },
     {
-      "protocol_object_id": "VITA-PR-VITA_CTRL_007",
+      "protocol_object_id": "CTRL-PR-VITA_CTRL_007",
       "anchor_condition_ids": [
         "VITA_CTRL_007"
       ],

@@ -1,0 +1,121 @@
+{
+  "artifact_name": "controller-benchmark-cx004-example-insufficient-partner-return-v0",
+  "generated_on": "2026-04-04T05:07:49.822626+00:00",
+  "script_path": "repo:/programs/partial-reprogramming-controller/scripts/controller_benchmark_build_cx004_resolution_receipt.py",
+  "packet_id": "CTRL-BENCH-CX004-PACKET-V0-001",
+  "contract_id": "CTRL-BENCH-CX004-RESOLUTION-CONTRACT-V0-001",
+  "target_pair_condition_ids": [
+    "VITA_CTRL_003",
+    "VITA_CTRL_005"
+  ],
+  "execution_dataset_metadata": {
+    "dataset_id": "CX004-EXAMPLE-INSUFFICIENT-V0-001",
+    "submitter_role": "internal_contract_rehearsal",
+    "returned_timepoints": [
+      "D0 baseline",
+      "D10 early_late_window",
+      "D20 Olova_direct_age_window"
+    ],
+    "returned_assays": [
+      "single-cell RNA-seq"
+    ],
+    "withdrawal_window_present": false,
+    "provenance_locators": [
+      "internal_example_insufficient_packet_no_partner_dataset"
+    ]
+  },
+  "deliverable_results": [
+    {
+      "deliverable_id": "CX004-D01",
+      "name": "sample_manifest",
+      "status": "partial",
+      "bounded_summary": "Only a partial timepoint ladder was supplied.",
+      "evidence_locator": "internal_example_insufficient_packet_no_partner_dataset"
+    },
+    {
+      "deliverable_id": "CX004-D02",
+      "name": "cell_metadata_table",
+      "status": "delivered",
+      "bounded_summary": "Placeholder per-cell table is present for rehearsal only.",
+      "evidence_locator": "internal_example_insufficient_packet_no_partner_dataset"
+    },
+    {
+      "deliverable_id": "CX004-D03",
+      "name": "state_table",
+      "status": "partial",
+      "bounded_summary": "State table cannot separate stable and unstable late states.",
+      "evidence_locator": "internal_example_insufficient_packet_no_partner_dataset"
+    },
+    {
+      "deliverable_id": "CX004-D04",
+      "name": "trajectory_summary",
+      "status": "partial",
+      "bounded_summary": "Continuity summary is placeholder-only.",
+      "evidence_locator": "internal_example_insufficient_packet_no_partner_dataset"
+    },
+    {
+      "deliverable_id": "CX004-D05",
+      "name": "withdrawal_stability_summary",
+      "status": "missing",
+      "bounded_summary": "No withdrawal or recovery evidence was supplied.",
+      "evidence_locator": "internal_example_insufficient_packet_no_partner_dataset"
+    },
+    {
+      "deliverable_id": "CX004-D06",
+      "name": "cx004_readout_adjudication_table",
+      "status": "delivered",
+      "bounded_summary": "All readouts are explicitly marked insufficient.",
+      "evidence_locator": "internal_example_insufficient_packet_no_partner_dataset"
+    }
+  ],
+  "readout_adjudications": [
+    {
+      "readout_id": "CX004-R01",
+      "name": "late_identity_coherence_map",
+      "observed_verdict": "insufficient_signal",
+      "bounded_summary": "Example insufficiency only. The returned packet omits the full late ladder and withdrawal readout, so this adjudication cannot shrink CX-004.",
+      "evidence_locator": "internal_example_insufficient_packet_no_partner_dataset"
+    },
+    {
+      "readout_id": "CX004-R02",
+      "name": "rare_state_burden",
+      "observed_verdict": "insufficient_signal",
+      "bounded_summary": "Example insufficiency only. The returned packet omits the full late ladder and withdrawal readout, so this adjudication cannot shrink CX-004.",
+      "evidence_locator": "internal_example_insufficient_packet_no_partner_dataset"
+    },
+    {
+      "readout_id": "CX004-R03",
+      "name": "withdrawal_stability_verdict",
+      "observed_verdict": "insufficient_signal",
+      "bounded_summary": "Example insufficiency only. The returned packet omits the full late ladder and withdrawal readout, so this adjudication cannot shrink CX-004.",
+      "evidence_locator": "internal_example_insufficient_packet_no_partner_dataset"
+    },
+    {
+      "readout_id": "CX004-R04",
+      "name": "cross_window_continuity_check",
+      "observed_verdict": "insufficient_signal",
+      "bounded_summary": "Example insufficiency only. The returned packet omits the full late ladder and withdrawal readout, so this adjudication cannot shrink CX-004.",
+      "evidence_locator": "internal_example_insufficient_packet_no_partner_dataset"
+    }
+  ],
+  "field_update_proposals": [
+    {
+      "condition_id": "VITA_CTRL_005",
+      "field_name": "identity_pressure_level",
+      "previous_value": "unresolved",
+      "next_value": "unresolved",
+      "basis_readout_ids": []
+    },
+    {
+      "condition_id": "VITA_CTRL_005",
+      "field_name": "risk_pressure_level",
+      "previous_value": "unresolved",
+      "next_value": "unresolved",
+      "basis_readout_ids": []
+    }
+  ],
+  "proposed_resolution_path_id": "CX004-PATH-UNRESOLVED",
+  "proposed_pair_resolution_state": "insufficient_packet",
+  "submitter_summary": "Example insufficient return used to prove the resolution engine can preserve dormancy without inventing a biological shrink.",
+  "proposed_bounded_claim": "This example packet does not earn a biological CX-004 resolution. It only demonstrates contract-aware insufficiency handling."
+}

@@ -35,7 +35,7 @@ test("current benchmark loader exposes the happy path object", () => {
   assert.equal(benchmark.conditionRecords.length, 8);
   assert.equal(benchmark.ageOnlyRows.length, 8);
   assert.equal(benchmark.controllerRows.length, 8);
-  assert.equal(benchmark.cx004ValidationHandoff.handoff_id, "CTRL-VITA-CX004-HANDOFF-V0-001");
+  assert.equal(benchmark.cx004ValidationHandoff.handoff_id, "CTRL-BENCH-CX004-HANDOFF-V0-001");
   assert.equal(
     benchmark.cx004ValidationHandoffReceipt.handoff_verdict,
     "cx004_validation_handoff_frozen",

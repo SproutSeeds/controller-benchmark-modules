@@ -1,0 +1,95 @@
+{
+  "artifact_name": "controller-benchmark-cx004-resolution-receipt-v0",
+  "generated_on": "2026-04-04T05:07:49.822699+00:00",
+  "script_path": "repo:/programs/partial-reprogramming-controller/scripts/controller_benchmark_build_cx004_resolution_receipt.py",
+  "inputs": {
+    "packet": "repo:/programs/partial-reprogramming-controller/benchmarks/phase-stratified-controller-benchmark-v0/controller-benchmark-cx004-partner-executable-validation-packet-v0.json",
+    "contract": "repo:/programs/partial-reprogramming-controller/benchmarks/phase-stratified-controller-benchmark-v0/controller-benchmark-cx004-resolution-receipt-contract-v0.json",
+    "partner_return": "repo:/programs/partial-reprogramming-controller/benchmarks/phase-stratified-controller-benchmark-v0/controller-benchmark-cx004-example-insufficient-partner-return-v0.json"
+  },
+  "outputs": {
+    "receipt": "repo:/programs/partial-reprogramming-controller/benchmarks/phase-stratified-controller-benchmark-v0/controller-benchmark-cx004-example-insufficient-resolution-receipt-v0.json"
+  },
+  "packet_id": "CTRL-BENCH-CX004-PACKET-V0-001",
+  "contract_id": "CTRL-BENCH-CX004-RESOLUTION-CONTRACT-V0-001",
+  "execution_dataset_metadata": {
+    "dataset_id": "CX004-EXAMPLE-INSUFFICIENT-V0-001",
+    "submitter_role": "internal_contract_rehearsal",
+    "returned_timepoints": [
+      "D0 baseline",
+      "D10 early_late_window",
+      "D20 Olova_direct_age_window"
+    ],
+    "returned_assays": [
+      "single-cell RNA-seq"
+    ],
+    "withdrawal_window_present": false,
+    "provenance_locators": [
+      "internal_example_insufficient_packet_no_partner_dataset"
+    ]
+  },
+  "execution_dataset_id": "CX004-EXAMPLE-INSUFFICIENT-V0-001",
+  "resolution_path_id": "CX004-PATH-UNRESOLVED",
+  "pair_resolution_state": "insufficient_packet",
+  "readout_results": [
+    {
+      "readout_id": "CX004-R01",
+      "observed_verdict": "insufficient_signal",
+      "bounded_summary": "Example insufficiency only. The returned packet omits the full late ladder and withdrawal readout, so this adjudication cannot shrink CX-004.",
+      "evidence_locator": "internal_example_insufficient_packet_no_partner_dataset"
+    },
+    {
+      "readout_id": "CX004-R02",
+      "observed_verdict": "insufficient_signal",
+      "bounded_summary": "Example insufficiency only. The returned packet omits the full late ladder and withdrawal readout, so this adjudication cannot shrink CX-004.",
+      "evidence_locator": "internal_example_insufficient_packet_no_partner_dataset"
+    },
+    {
+      "readout_id": "CX004-R03",
+      "observed_verdict": "insufficient_signal",
+      "bounded_summary": "Example insufficiency only. The returned packet omits the full late ladder and withdrawal readout, so this adjudication cannot shrink CX-004.",
+      "evidence_locator": "internal_example_insufficient_packet_no_partner_dataset"
+    },
+    {
+      "readout_id": "CX004-R04",
+      "observed_verdict": "insufficient_signal",
+      "bounded_summary": "Example insufficiency only. The returned packet omits the full late ladder and withdrawal readout, so this adjudication cannot shrink CX-004.",
+      "evidence_locator": "internal_example_insufficient_packet_no_partner_dataset"
+    }
+  ],
+  "field_updates": [
+    {
+      "condition_id": "VITA_CTRL_005",
+      "field_name": "identity_pressure_level",
+      "previous_value": "unresolved",
+      "next_value": "unresolved",
+      "basis_readout_ids": []
+    },
+    {
+      "condition_id": "VITA_CTRL_005",
+      "field_name": "risk_pressure_level",
+      "previous_value": "unresolved",
+      "next_value": "unresolved",
+      "basis_readout_ids": []
+    }
+  ],
+  "contradiction_update": {
+    "contradiction_class_id": "CX-004",
+    "next_state": "insufficient_packet",
+    "kernel_resolution": "abstain_pending_review"
+  },
+  "passive_recommendation_effect": "keep_dormant",
+  "bounded_claim": "This example packet does not earn a biological CX-004 resolution. It only demonstrates contract-aware insufficiency handling.",
+  "resolution_receipt_earned": false,
+  "biological_resolution_earned": false,
+  "validation_summary": {
+    "contract_satisfied": false,
+    "blocking_issues": [
+      "missing_required_timepoints:D8 entry_to_maturation,D13 maturation_window,D15 maturation_window,D17 Gill_matched_late_window,D28 Olova_direct_age_window,D35 withdrawal_or_recovery",
+      "withdrawal_window_absent",
+      "deliverable_not_satisfied:CX004-D05"
+    ],
+    "can_shrink_pair": false,
+    "submitter_summary": "Example insufficient return used to prove the resolution engine can preserve dormancy without inventing a biological shrink."
+  }
+}

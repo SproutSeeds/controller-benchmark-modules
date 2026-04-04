@@ -133,7 +133,7 @@ test("cx004 validation handoff summary preserves the live pair object", () => {
     bundle.cx004ValidationHandoffReceipt,
   );
 
-  assert.equal(summary.handoff_id, "CTRL-VITA-CX004-HANDOFF-V0-001");
+  assert.equal(summary.handoff_id, "CTRL-BENCH-CX004-HANDOFF-V0-001");
   assert.equal(summary.driver_contradiction_class_id, "CX-004");
   assert.deepEqual(summary.pair_condition_ids, [
     "VITA_CTRL_003",

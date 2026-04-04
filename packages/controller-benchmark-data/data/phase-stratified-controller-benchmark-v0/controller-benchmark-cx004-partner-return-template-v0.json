@@ -1,0 +1,131 @@
+{
+  "artifact_name": "controller-benchmark-cx004-partner-return-template-v0",
+  "generated_on": "2026-04-04T05:07:49.822501+00:00",
+  "script_path": "repo:/programs/partial-reprogramming-controller/scripts/controller_benchmark_build_cx004_resolution_receipt.py",
+  "packet_id": "CTRL-BENCH-CX004-PACKET-V0-001",
+  "contract_id": "CTRL-BENCH-CX004-RESOLUTION-CONTRACT-V0-001",
+  "target_pair_condition_ids": [
+    "VITA_CTRL_003",
+    "VITA_CTRL_005"
+  ],
+  "execution_dataset_metadata": {
+    "dataset_id": "<fill>",
+    "submitter_role": "<fill>",
+    "returned_timepoints": [
+      "D0 baseline",
+      "D8 entry_to_maturation",
+      "D10 early_late_window",
+      "D13 maturation_window",
+      "D15 maturation_window",
+      "D17 Gill_matched_late_window",
+      "D20 Olova_direct_age_window",
+      "D28 Olova_direct_age_window",
+      "D35 withdrawal_or_recovery"
+    ],
+    "returned_assays": [
+      "single-cell RNA-seq"
+    ],
+    "withdrawal_window_present": "<true|false>",
+    "provenance_locators": [
+      "<fill>"
+    ]
+  },
+  "deliverable_results": [
+    {
+      "deliverable_id": "CX004-D01",
+      "name": "sample_manifest",
+      "status": "<delivered|partial|missing>",
+      "bounded_summary": "<fill>",
+      "evidence_locator": "<fill>"
+    },
+    {
+      "deliverable_id": "CX004-D02",
+      "name": "cell_metadata_table",
+      "status": "<delivered|partial|missing>",
+      "bounded_summary": "<fill>",
+      "evidence_locator": "<fill>"
+    },
+    {
+      "deliverable_id": "CX004-D03",
+      "name": "state_table",
+      "status": "<delivered|partial|missing>",
+      "bounded_summary": "<fill>",
+      "evidence_locator": "<fill>"
+    },
+    {
+      "deliverable_id": "CX004-D04",
+      "name": "trajectory_summary",
+      "status": "<delivered|partial|missing>",
+      "bounded_summary": "<fill>",
+      "evidence_locator": "<fill>"
+    },
+    {
+      "deliverable_id": "CX004-D05",
+      "name": "withdrawal_stability_summary",
+      "status": "<delivered|partial|missing>",
+      "bounded_summary": "<fill>",
+      "evidence_locator": "<fill>"
+    },
+    {
+      "deliverable_id": "CX004-D06",
+      "name": "cx004_readout_adjudication_table",
+      "status": "<delivered|partial|missing>",
+      "bounded_summary": "<fill>",
+      "evidence_locator": "<fill>"
+    }
+  ],
+  "readout_adjudications": [
+    {
+      "readout_id": "CX004-R01",
+      "name": "late_identity_coherence_map",
+      "observed_verdict": "<supports_multi_family_admissible_late_lane|supports_gill_only_admissible_late_lane|supports_broader_late_positive_collapse|insufficient_signal>",
+      "bounded_summary": "<fill>",
+      "evidence_locator": "<fill>"
+    },
+    {
+      "readout_id": "CX004-R02",
+      "name": "rare_state_burden",
+      "observed_verdict": "<supports_multi_family_admissible_late_lane|supports_gill_only_admissible_late_lane|supports_broader_late_positive_collapse|insufficient_signal>",
+      "bounded_summary": "<fill>",
+      "evidence_locator": "<fill>"
+    },
+    {
+      "readout_id": "CX004-R03",
+      "name": "withdrawal_stability_verdict",
+      "observed_verdict": "<supports_multi_family_admissible_late_lane|supports_gill_only_admissible_late_lane|supports_broader_late_positive_collapse|insufficient_signal>",
+      "bounded_summary": "<fill>",
+      "evidence_locator": "<fill>"
+    },
+    {
+      "readout_id": "CX004-R04",
+      "name": "cross_window_continuity_check",
+      "observed_verdict": "<supports_multi_family_admissible_late_lane|supports_gill_only_admissible_late_lane|supports_broader_late_positive_collapse|insufficient_signal>",
+      "bounded_summary": "<fill>",
+      "evidence_locator": "<fill>"
+    }
+  ],
+  "field_update_proposals": [
+    {
+      "condition_id": "VITA_CTRL_005",
+      "field_name": "identity_pressure_level",
+      "previous_value": "unresolved",
+      "next_value": "<low|moderate|high|unresolved>",
+      "basis_readout_ids": [
+        "<fill>"
+      ]
+    },
+    {
+      "condition_id": "VITA_CTRL_005",
+      "field_name": "risk_pressure_level",
+      "previous_value": "unresolved",
+      "next_value": "<low|moderate|high|unresolved>",
+      "basis_readout_ids": [
+        "<fill>"
+      ]
+    }
+  ],
+  "proposed_resolution_path_id": "<CX004-PATH-01|CX004-PATH-02|CX004-PATH-03|CX004-PATH-UNRESOLVED>",
+  "proposed_pair_resolution_state": "<review_required|shrunk_to_multi_family_admissible_late_lane|shrunk_to_gill_only_admissible_late_lane|late_positive_story_collapsed|insufficient_packet>",
+  "submitter_summary": "<fill>",
+  "proposed_bounded_claim": "<fill>"
+}

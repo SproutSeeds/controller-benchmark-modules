@@ -1,6 +1,6 @@
 {
   "artifact_name": "controller-benchmark-cx004-supervised-dry-run-receipt-v0",
-  "generated_on": "2026-04-04T03:22:46.839699+00:00",
+  "generated_on": "2026-04-04T05:07:49.808364+00:00",
   "script_path": "repo:/programs/partial-reprogramming-controller/scripts/controller_benchmark_build_cx004_supervised_exchange.py",
   "inputs": {
     "packet": "repo:/programs/partial-reprogramming-controller/benchmarks/phase-stratified-controller-benchmark-v0/controller-benchmark-cx004-partner-executable-validation-packet-v0.json",
@@ -11,9 +11,9 @@
   "outputs": {
     "dry_run_receipt": "repo:/programs/partial-reprogramming-controller/benchmarks/phase-stratified-controller-benchmark-v0/controller-benchmark-cx004-supervised-dry-run-receipt-v0.json"
   },
-  "exercise_id": "CTRL-VITA-CX004-SUPERVISED-DRYRUN-V0-001",
-  "packet_id": "CTRL-VITA-CX004-PACKET-V0-001",
-  "contract_id": "CTRL-VITA-CX004-RESOLUTION-CONTRACT-V0-001",
+  "exercise_id": "CTRL-BENCH-CX004-SUPERVISED-DRYRUN-V0-001",
+  "packet_id": "CTRL-BENCH-CX004-PACKET-V0-001",
+  "contract_id": "CTRL-BENCH-CX004-RESOLUTION-CONTRACT-V0-001",
   "intake_packet_id": "controller-benchmark-cx004-partner-intake-example-packet-v0",
   "exchange_id": "controller-benchmark-cx004-example-packet-exchange-v0",
   "supervision_verdict": "review_required",

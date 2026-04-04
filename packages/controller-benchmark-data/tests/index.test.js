@@ -150,7 +150,7 @@ test("latest bundle loader returns a coherent snapshot", () => {
   assert.equal(bundle.benchmarkShellReceipt.condition_count, 8);
   assert.equal(bundle.contradictionLedger.live_contradictions.length, 8);
   assert.equal(bundle.contradictionKernelReceipt.live_contradiction_count, 8);
-  assert.equal(bundle.cx004ValidationHandoff.handoff_id, "CTRL-VITA-CX004-HANDOFF-V0-001");
+  assert.equal(bundle.cx004ValidationHandoff.handoff_id, "CTRL-BENCH-CX004-HANDOFF-V0-001");
   assert.equal(
     bundle.cx004ValidationHandoffReceipt.handoff_verdict,
     "cx004_validation_handoff_frozen",

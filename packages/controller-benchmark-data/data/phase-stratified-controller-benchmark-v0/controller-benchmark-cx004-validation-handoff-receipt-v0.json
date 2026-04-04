@@ -1,6 +1,6 @@
 {
   "artifact_name": "controller-benchmark-cx004-validation-handoff-receipt-v0",
-  "generated_on": "2026-04-04T04:00:57.262908+00:00",
+  "generated_on": "2026-04-04T05:07:49.676011+00:00",
   "script_path": "repo:/programs/partial-reprogramming-controller/scripts/controller_benchmark_build_cx004_validation_handoff.py",
   "inputs": {
     "condition_records": "repo:/programs/partial-reprogramming-controller/benchmarks/phase-stratified-controller-benchmark-v0/controller-benchmark-condition-records-v0.jsonl",
@@ -11,7 +11,7 @@
     "handoff": "repo:/programs/partial-reprogramming-controller/benchmarks/phase-stratified-controller-benchmark-v0/controller-benchmark-cx004-validation-handoff-v0.json",
     "receipt": "repo:/programs/partial-reprogramming-controller/benchmarks/phase-stratified-controller-benchmark-v0/controller-benchmark-cx004-validation-handoff-receipt-v0.json"
   },
-  "handoff_id": "CTRL-VITA-CX004-HANDOFF-V0-001",
+  "handoff_id": "CTRL-BENCH-CX004-HANDOFF-V0-001",
   "driver_contradiction_class_id": "CX-004",
   "driver_contradiction_count": 2,
   "pair_condition_ids": [

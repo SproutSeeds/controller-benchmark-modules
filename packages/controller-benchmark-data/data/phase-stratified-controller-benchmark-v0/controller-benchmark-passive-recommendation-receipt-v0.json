@@ -1,6 +1,6 @@
 {
   "artifact_name": "controller-benchmark-passive-recommendation-receipt-v0",
-  "generated_on": "2026-04-04T04:00:57.378151+00:00",
+  "generated_on": "2026-04-04T05:07:49.815140+00:00",
   "script_path": "repo:/programs/partial-reprogramming-controller/scripts/controller_benchmark_build_passive_recommendation_scaffold.py",
   "inputs": {
     "condition_records": "repo:/programs/partial-reprogramming-controller/benchmarks/phase-stratified-controller-benchmark-v0/controller-benchmark-condition-records-v0.jsonl",
@@ -38,18 +38,18 @@
     "VITA_CTRL_008"
   ],
   "candidate_protocol_object_ids": [
-    "VITA-PR-VITA_CTRL_003"
+    "CTRL-PR-VITA_CTRL_003"
   ],
   "blocked_protocol_object_ids": [
-    "VITA-PR-VITA_CTRL_002",
-    "VITA-PR-VITA_CTRL_006"
+    "CTRL-PR-VITA_CTRL_002",
+    "CTRL-PR-VITA_CTRL_006"
   ],
   "deferred_protocol_object_ids": [
-    "VITA-PR-VITA_CTRL_001",
-    "VITA-PR-VITA_CTRL_005"
+    "CTRL-PR-VITA_CTRL_001",
+    "CTRL-PR-VITA_CTRL_005"
   ],
   "reference_only_protocol_object_ids": [
-    "VITA-PR-VITA_CTRL_007"
+    "CTRL-PR-VITA_CTRL_007"
   ],
   "armed_watch_class_ids": [
     "CX-WATCH-002"

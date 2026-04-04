@@ -1,15 +1,15 @@
 {
   "artifact_name": "controller-benchmark-cx004-resolution-receipt-contract-v0",
-  "generated_on": "2026-04-04T03:14:25.086907+00:00",
+  "generated_on": "2026-04-04T05:07:49.802476+00:00",
   "script_path": "repo:/programs/partial-reprogramming-controller/scripts/controller_benchmark_build_cx004_partner_packet.py",
   "inputs": {
     "handoff": "repo:/programs/partial-reprogramming-controller/benchmarks/phase-stratified-controller-benchmark-v0/controller-benchmark-cx004-validation-handoff-v0.json",
     "handoff_receipt": "repo:/programs/partial-reprogramming-controller/benchmarks/phase-stratified-controller-benchmark-v0/controller-benchmark-cx004-validation-handoff-receipt-v0.json",
     "packet": "repo:/programs/partial-reprogramming-controller/benchmarks/phase-stratified-controller-benchmark-v0/controller-benchmark-cx004-partner-executable-validation-packet-v0.json"
   },
-  "contract_id": "CTRL-VITA-CX004-RESOLUTION-CONTRACT-V0-001",
-  "handoff_id": "CTRL-VITA-CX004-HANDOFF-V0-001",
-  "packet_id": "CTRL-VITA-CX004-PACKET-V0-001",
+  "contract_id": "CTRL-BENCH-CX004-RESOLUTION-CONTRACT-V0-001",
+  "handoff_id": "CTRL-BENCH-CX004-HANDOFF-V0-001",
+  "packet_id": "CTRL-BENCH-CX004-PACKET-V0-001",
   "required_receipt_artifact_name": "controller-benchmark-cx004-resolution-receipt-v0",
   "required_anchor_condition_ids": [
     "VITA_CTRL_003",
@@ -82,8 +82,8 @@
   ],
   "receipt_template": {
     "artifact_name": "controller-benchmark-cx004-resolution-receipt-v0",
-    "handoff_id": "CTRL-VITA-CX004-HANDOFF-V0-001",
-    "packet_id": "CTRL-VITA-CX004-PACKET-V0-001",
+    "handoff_id": "CTRL-BENCH-CX004-HANDOFF-V0-001",
+    "packet_id": "CTRL-BENCH-CX004-PACKET-V0-001",
     "execution_dataset_id": "<fill>",
     "resolution_path_id": "<CX004-PATH-01|CX004-PATH-02|CX004-PATH-03|CX004-PATH-UNRESOLVED>",
     "pair_resolution_state": "<review_required|shrunk_to_multi_family_admissible_late_lane|shrunk_to_gill_only_admissible_late_lane|late_positive_story_collapsed|insufficient_packet>",

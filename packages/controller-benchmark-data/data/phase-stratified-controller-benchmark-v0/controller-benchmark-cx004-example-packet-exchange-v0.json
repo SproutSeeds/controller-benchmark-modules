@@ -1,6 +1,6 @@
 {
   "exchange_id": "controller-benchmark-cx004-example-packet-exchange-v0",
-  "generated_on": "2026-04-04T03:22:46.839691+00:00",
+  "generated_on": "2026-04-04T05:07:49.808357+00:00",
   "input_packet": "repo:/programs/partial-reprogramming-controller/benchmarks/phase-stratified-controller-benchmark-v0/controller-benchmark-cx004-partner-intake-example-packet-v0.json",
   "packet_artifact": "repo:/programs/partial-reprogramming-controller/benchmarks/phase-stratified-controller-benchmark-v0/controller-benchmark-cx004-partner-executable-validation-packet-v0.json",
   "contract_artifact": "repo:/programs/partial-reprogramming-controller/benchmarks/phase-stratified-controller-benchmark-v0/controller-benchmark-cx004-resolution-receipt-contract-v0.json",
