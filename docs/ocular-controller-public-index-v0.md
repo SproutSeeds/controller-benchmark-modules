@@ -1,14 +1,23 @@
-# Ocular Controller Public Index v0
+# Ocular Longevity Controller Public Index v0
 
 Date: 2026-04-11
 
 ## Purpose
 
-This is the public front door for the currently released ocular/controller
-benchmark surfaces.
+This is the public front door for the currently released ocular longevity
+controller and benchmark surfaces.
 
 It connects the public GitHub package repo, npm packages, and Synapse artifact
 shelves in one place, while keeping the claim boundary explicit.
+
+The mission context is safety-first lineage-preserving rejuvenation: build
+controller infrastructure that can evaluate whether a candidate partial
+reprogramming or restoration signal improves age-associated state while
+preserving adult identity and rejecting transformation-risk shortcuts.
+
+The ocular lane is the current bounded public wedge. It is not a therapy claim;
+it is a disciplined benchmark-and-evidence surface for asking what a controller
+should accept, reject, or leave unresolved in eye-relevant longevity research.
 
 ## Public Starting Points
 

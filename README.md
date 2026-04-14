@@ -1,20 +1,27 @@
-# Controller Benchmark Modules
+# Ocular Longevity Controller Benchmarks
 
 Published by SproutSeeds. Research stewardship: Fractal Research Group
 ([frg.earth](https://frg.earth)).
 
-This repository is the public package home for the controller benchmark module
-stack.
+This repository is the public artifact and package surface for a safety-first
+ocular longevity controller: a benchmarked research system for evaluating
+lineage-preserving rejuvenation signals without overclaiming therapy or solved
+biology.
 
-It holds reusable public infrastructure derived from the controller benchmark
-program, with the relationship-specific packet and private reviewer context
-kept out of scope.
+The work starts in the eye because ocular tissue gives the project a bounded,
+high-value place to test whether a rejuvenation signal preserves adult cell
+identity, avoids transformation risk, and remains honest under explicit
+decision gates.
 
-## Public Ocular / Controller Index
+The package name remains `controller-benchmark-modules` because this repo also
+publishes reusable benchmark infrastructure, but the public research context is
+ocular longevity and partial-reprogramming controller evaluation.
+
+## Start Here
 
 For the current public front door across GitHub, npm, and Synapse, start here:
 
-- `docs/ocular-controller-public-index-v0.md`
+- [Ocular Controller Public Index v0](docs/ocular-controller-public-index-v0.md)
 
 That index ties together:
 
