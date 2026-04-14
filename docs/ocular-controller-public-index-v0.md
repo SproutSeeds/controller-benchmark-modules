@@ -1,11 +1,11 @@
-# Ocular Longevity Controller Public Index v0
+# Retinal Longevity Controller Public Index v0
 
 Date: 2026-04-11
 
 ## Purpose
 
-This is the public front door for the currently released ocular longevity
-controller and benchmark surfaces.
+This is the public front door for the currently released retinal and ocular
+longevity controller and benchmark surfaces.
 
 It connects the public GitHub package repo, npm packages, and Synapse artifact
 shelves in one place, while keeping the claim boundary explicit.
@@ -15,9 +15,10 @@ controller infrastructure that can evaluate whether a candidate partial
 reprogramming or restoration signal improves age-associated state while
 preserving adult identity and rejecting transformation-risk shortcuts.
 
-The ocular lane is the current bounded public wedge. It is not a therapy claim;
-it is a disciplined benchmark-and-evidence surface for asking what a controller
-should accept, reject, or leave unresolved in eye-relevant longevity research.
+The retinal lane is the current bounded public wedge. It is not a therapy
+claim; it is a disciplined benchmark-and-evidence surface for asking what a
+controller should accept, reject, or leave unresolved in eye-relevant longevity
+research.
 
 ## Public Starting Points
 
@@ -73,7 +74,8 @@ Public ocular world-share pack:
 
 ### Ocular benchmark pack v0
 
-The benchmark pack includes:
+The ocular benchmark pack carries the current retina-centered public benchmark
+surface. It includes:
 
 - an ocular benchmark contract
 - an ocular scoring-kernel note
@@ -90,7 +92,8 @@ Role:
 
 ### Ocular world-share pack v0
 
-The world-share pack includes:
+The ocular world-share pack carries the current retina/RGC-centered public
+progress story. It includes:
 
 - a public progress brief
 - a public claim-boundary note
@@ -124,13 +127,13 @@ Role:
 The public surfaces support this bounded statement:
 
 The controller project has public, versioned benchmark infrastructure and a
-support-only ocular progress shelf, including a pair-backed adult human support
-layer, an exact stable adult subset, and named residual gaps in the current
-human-route surface.
+support-only retinal/ocular progress shelf, including a pair-backed adult human
+support layer, an exact stable adult subset, and named residual gaps in the
+current human-route surface.
 
 The public surfaces do not claim:
 
-- solved ocular rejuvenation
+- solved retinal or ocular rejuvenation
 - human intervention truth
 - adult human kernel re-entry
 - therapy readiness
