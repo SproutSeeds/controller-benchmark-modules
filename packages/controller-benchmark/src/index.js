@@ -143,6 +143,253 @@ export const RELEASE_METADATA = Object.freeze({
   ]),
 });
 
+export const BUILT_IN_EXAMPLES = Object.freeze([
+  Object.freeze({
+    id: "cx004",
+    aliases: Object.freeze(["cx-004", "gill-vs-olova", "gill_olova"]),
+    label: "CX-004 contradiction walkthrough",
+    summary:
+      "Explains how the benchmark handles the live Gill-vs-Olova late-window disagreement end to end.",
+  }),
+  Object.freeze({
+    id: "hazard-stop",
+    aliases: Object.freeze(["hazard_stop", "hard-block", "ohnishi"]),
+    label: "Hazard-stop hard block walkthrough",
+    summary:
+      "Explains how the benchmark fail-closes an attractive but hazard-bearing condition without opening an adjudication lane.",
+  }),
+]);
+
+function normalizeExampleId(value) {
+  return String(value ?? "")
+    .trim()
+    .toLowerCase();
+}
+
+function resolveBuiltInExample(value) {
+  const normalized = normalizeExampleId(value);
+  return BUILT_IN_EXAMPLES.find(
+    (row) => row.id === normalized || row.aliases.includes(normalized),
+  );
+}
+
+function formatScalar(value) {
+  if (typeof value === "number") {
+    return value.toFixed(3).replace(/0+$/, "").replace(/\.$/, "");
+  }
+
+  return String(value ?? "unknown");
+}
+
+function formatDelimitedList(values, emptyLabel = "none") {
+  return Array.isArray(values) && values.length > 0
+    ? values.join(", ")
+    : emptyLabel;
+}
+
+function getConditionById(bundle, conditionId) {
+  return (bundle.conditionRecords ?? []).find((row) => row.condition_id === conditionId);
+}
+
+function getRowById(rows, conditionId) {
+  return (rows ?? []).find((row) => row.condition_id === conditionId);
+}
+
+function assertExampleCondition(bundle, conditionId) {
+  const row = getConditionById(bundle, conditionId);
+
+  if (!row) {
+    throw new Error(`condition ${conditionId} is missing from the current benchmark`);
+  }
+
+  return row;
+}
+
+function assertExampleRow(rows, conditionId, label) {
+  const row = getRowById(rows, conditionId);
+
+  if (!row) {
+    throw new Error(`${label} row for ${conditionId} is missing from the current benchmark`);
+  }
+
+  return row;
+}
+
+function assertCx004Contradictions(bundle) {
+  const contradictions = (bundle.contradictionLedger?.live_contradictions ?? []).filter(
+    (row) => row.contradiction_class_id === "CX-004",
+  );
+
+  if (contradictions.length === 0) {
+    throw new Error("CX-004 contradictions are missing from the current benchmark");
+  }
+
+  return contradictions;
+}
+
+function getProtocolObjectByConditionId(bundle, conditionId) {
+  return (bundle.passiveRecommendationScaffold?.protocol_objects ?? []).find((row) =>
+    row.anchor_condition_ids?.includes(conditionId),
+  );
+}
+
+function assertProtocolObject(bundle, conditionId) {
+  const row = getProtocolObjectByConditionId(bundle, conditionId);
+
+  if (!row) {
+    throw new Error(
+      `passive recommendation protocol object for ${conditionId} is missing from the current benchmark`,
+    );
+  }
+
+  return row;
+}
+
+function renderCx004Example(bundle = loadCurrentBenchmark()) {
+  assertBundle(bundle);
+
+  const handoff = bundle.cx004ValidationHandoff ?? readCx004ValidationHandoff();
+  const handoffReceipt =
+    bundle.cx004ValidationHandoffReceipt ?? readCx004ValidationHandoffReceipt();
+  const passiveReceipt =
+    bundle.passiveRecommendationReceipt ?? readPassiveRecommendationReceipt();
+  const snapshot = buildCurrentBenchmarkSnapshot(bundle);
+
+  const [gillId, olovaId] = handoff?.target_pair?.condition_ids ?? [];
+  const gillCondition = assertExampleCondition(bundle, gillId);
+  const olovaCondition = assertExampleCondition(bundle, olovaId);
+
+  const baselineGill = assertExampleRow(bundle.ageOnlyRows, gillId, "baseline");
+  const baselineOlova = assertExampleRow(bundle.ageOnlyRows, olovaId, "baseline");
+  const controllerGill = assertExampleRow(bundle.controllerRows, gillId, "controller");
+  const controllerOlova = assertExampleRow(bundle.controllerRows, olovaId, "controller");
+
+  const cx004Contradictions = assertCx004Contradictions(bundle);
+  const gillContradiction = cx004Contradictions.find((row) => row.condition_id === gillId);
+  const olovaContradiction = cx004Contradictions.find((row) => row.condition_id === olovaId);
+
+  const lines = [
+    "controller-benchmark built-in example: cx004",
+    "",
+    "What this example is:",
+    "A live cross-family contradiction where Gill is more admissible, but Olova carries the stronger direct age contract.",
+    "",
+    "The pair:",
+    `- ${gillId} (${gillCondition.study_family_id})`,
+    `  age_signal_score=${formatScalar(gillCondition.age_signal_score)}, identity_status=${gillCondition.identity_status}, risk_status=${gillCondition.risk_status}`,
+    `  summary: ${gillCondition.condition_summary}`,
+    `- ${olovaId} (${olovaCondition.study_family_id})`,
+    `  age_signal_score=${formatScalar(olovaCondition.age_signal_score)}, identity_status=${olovaCondition.identity_status}, risk_status=${olovaCondition.risk_status}`,
+    `  summary: ${olovaCondition.condition_summary}`,
+    "",
+    "What the age-only baseline does:",
+    `- ${gillId}: ${baselineGill.baseline_output} (${baselineGill.baseline_rationale})`,
+    `- ${olovaId}: ${baselineOlova.baseline_output} (${baselineOlova.baseline_rationale})`,
+    "",
+    "What the controller does:",
+    `- ${gillId}: ${controllerGill.controller_output} (${controllerGill.controller_rationale})`,
+    `- ${olovaId}: ${controllerOlova.controller_output} (${controllerOlova.controller_rationale})`,
+    "",
+    "Why this becomes a contradiction instead of a silent ranking:",
+    `- Gill-side contradiction: ${gillContradiction?.trigger_summary ?? "missing"}`,
+    `- Olova-side contradiction: ${olovaContradiction?.trigger_summary ?? "missing"}`,
+    `- active CX-004 contradiction count: ${cx004Contradictions.length}`,
+    "",
+    "How the benchmark escalates the disagreement:",
+    `- handoff_id: ${handoff.handoff_id}`,
+    `- handoff_verdict: ${handoffReceipt.handoff_verdict}`,
+    `- minimum_timepoints (${handoff.minimal_validation_design.minimum_timepoints.length}): ${handoff.minimal_validation_design.minimum_timepoints.join(", ")}`,
+    `- required_assays: ${formatDelimitedList(handoff.minimal_validation_design.required_assays)}`,
+    `- discriminating_readouts (${handoff.exact_discriminating_readouts.length}): ${handoff.exact_discriminating_readouts.map((row) => row.name).join(", ")}`,
+    "",
+    "Current benchmark-wide safety posture:",
+    `- shell fail_closed: ${snapshot.shell?.fail_closed === true ? "true" : "false"}`,
+    `- live contradiction count: ${snapshot.contradictions?.live_contradiction_count ?? 0}`,
+    `- dormant recommendation verdict: ${passiveReceipt.dormant_verdict}`,
+    `- live recommendation active count: ${snapshot.recommendations?.live_recommendation_active_count ?? 0}`,
+    "",
+    "Bottom line:",
+    "The benchmark does not let stronger age movement outrank unresolved identity and risk. It preserves the disagreement, freezes a validation handoff, and keeps live recommendation behavior dormant until the missing biology is earned.",
+  ];
+
+  return `${lines.join("\n")}\n`;
+}
+
+function renderHazardStopExample(bundle = loadCurrentBenchmark()) {
+  assertBundle(bundle);
+
+  const snapshot = buildCurrentBenchmarkSnapshot(bundle);
+  const conditionId = "VITA_CTRL_006";
+  const condition = assertExampleCondition(bundle, conditionId);
+  const baselineRow = assertExampleRow(bundle.ageOnlyRows, conditionId, "baseline");
+  const controllerRow = assertExampleRow(bundle.controllerRows, conditionId, "controller");
+  const protocolObject = assertProtocolObject(bundle, conditionId);
+
+  const lines = [
+    "controller-benchmark built-in example: hazard-stop",
+    "",
+    "What this example is:",
+    "A hard stop-rule case where age-only ranking still looks attractive, but the benchmark refuses to reopen a direct tumor-hazard family.",
+    "",
+    "The condition:",
+    `- ${conditionId} (${condition.study_family_id})`,
+    `  age_signal_score=${formatScalar(condition.age_signal_score)}, identity_status=${condition.identity_status}, risk_status=${condition.risk_status}`,
+    `  summary: ${condition.condition_summary}`,
+    "",
+    "What the age-only baseline does:",
+    `- ${conditionId}: ${baselineRow.baseline_output} (${baselineRow.baseline_rationale})`,
+    "",
+    "What the controller does:",
+    `- ${conditionId}: ${controllerRow.controller_output} (${controllerRow.controller_rationale})`,
+    `- active_negative_family_ids: ${controllerRow.active_negative_family_ids || "none"}`,
+    "",
+    "Why the benchmark fail-closes instead of escalating to adjudication:",
+    `- passive_posture: ${protocolObject.passive_posture}`,
+    `- protocol_hypothesis_label: ${protocolObject.protocol_hypothesis_label}`,
+    `- blocking_boundaries: ${formatDelimitedList(protocolObject.recommendation_rationale?.blocking_boundaries)}`,
+    `- live contradiction ids: ${formatDelimitedList(protocolObject.contradiction_state?.live_contradiction_ids)}`,
+    `- required_evidence_before_activation: ${formatDelimitedList(protocolObject.required_evidence_before_activation)}`,
+    "",
+    "Current benchmark-wide safety posture:",
+    `- controller_hazard_blocked_count: ${snapshot.shell?.controller_hazard_blocked_count ?? 0}`,
+    `- controller_hazard_blocked_conditions: ${formatDelimitedList(snapshot.outputs?.controller_hazard_blocked_conditions)}`,
+    `- shell fail_closed: ${snapshot.shell?.fail_closed === true ? "true" : "false"}`,
+    `- dormant recommendation verdict: ${bundle.passiveRecommendationReceipt?.dormant_verdict ?? readPassiveRecommendationReceipt().dormant_verdict}`,
+    "",
+    "Bottom line:",
+    "This is the benchmark saying absolutely not. A direct hazard blocker is active, so the condition stays preserve-blocked even though age-only ranking would otherwise promote it.",
+  ];
+
+  return `${lines.join("\n")}\n`;
+}
+
+export function listBuiltInExamples() {
+  return BUILT_IN_EXAMPLES.map((row) => ({
+    id: row.id,
+    aliases: [...row.aliases],
+    label: row.label,
+    summary: row.summary,
+  }));
+}
+
+export function renderBuiltInExample(exampleId = "cx004", bundle = loadCurrentBenchmark()) {
+  const matched = resolveBuiltInExample(exampleId);
+
+  if (!matched) {
+    const knownIds = BUILT_IN_EXAMPLES.map((row) => row.id).join(", ");
+    throw new Error(`unknown example "${exampleId}". Known examples: ${knownIds}`);
+  }
+
+  switch (matched.id) {
+    case "cx004":
+      return renderCx004Example(bundle);
+    case "hazard-stop":
+      return renderHazardStopExample(bundle);
+    default:
+      throw new Error(`example renderer missing for "${matched.id}"`);
+  }
+}
+
 export function loadCurrentBenchmark() {
   return {
     ...loadLatestBundle(),

@@ -1,6 +1,6 @@
 {
   "name": "controller-benchmark",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Opinionated umbrella package for the current public controller benchmark release.",
   "license": "MIT",
   "repository": {
@@ -14,11 +14,15 @@
   },
   "type": "module",
   "main": "./src/index.js",
+  "bin": {
+    "controller-benchmark": "./bin/controller-benchmark.js"
+  },
   "sideEffects": false,
   "exports": {
     ".": "./src/index.js"
   },
   "files": [
+    "bin",
     "src",
     "README.md",
     "CHANGELOG.md",

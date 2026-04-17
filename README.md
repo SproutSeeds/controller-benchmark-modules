@@ -71,10 +71,26 @@ It is not the place for:
 
 Current verified npm versions:
 
-- `controller-benchmark@0.1.3`
+- `controller-benchmark@0.1.4`
 - `controller-benchmark-data@0.1.5`
 - `controller-benchmark-js@0.1.3`
 - `controller-benchmark-schemas@0.1.2`
+
+## CLI Walkthroughs
+
+The umbrella package now includes a small command-line entry point for concrete
+benchmark walkthroughs:
+
+```bash
+npx controller-benchmark --help
+npx controller-benchmark --list-examples
+npx controller-benchmark --example cx004
+npx controller-benchmark --example hazard-stop
+```
+
+Use `cx004` to inspect the Gill-versus-Olova contradiction path. Use
+`hazard-stop` to inspect a hard preserve-block case where the controller refuses
+to reopen a tumor-hazard family.
 
 ## Install Targets
 

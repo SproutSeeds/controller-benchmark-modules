@@ -19,6 +19,27 @@ npm test
 npm pack --dry-run
 ```
 
+## CLI
+
+The package also ships a tiny CLI for built-in walkthrough examples.
+
+```bash
+controller-benchmark --help
+controller-benchmark --list-examples
+controller-benchmark --example cx004
+controller-benchmark --example hazard-stop
+```
+
+The built-in examples currently cover:
+
+- `cx004`
+  - the concrete Gill-versus-Olova contradiction path, including the baseline
+    output, controller output, contradiction escalation, validation handoff,
+    and current dormant safety posture
+- `hazard-stop`
+  - a direct hard-block case where the baseline still looks attractive, but the
+    controller refuses to reopen a tumor-hazard family
+
 ## What This Is
 
 `controller-benchmark` is the one-install happy path for the current public
@@ -80,7 +101,7 @@ console.log(snapshot.validation_handoff.handoff_verdict);
 
 A static browser demo is included here:
 
-- [/Volumes/Code_2TB/code/longevity-research/packages/controller-benchmark/examples/browser-demo/index.html](/Volumes/Code_2TB/code/longevity-research/packages/controller-benchmark/examples/browser-demo/index.html)
+- `packages/controller-benchmark/examples/browser-demo/index.html`
 
 Refresh the demo data:
 
@@ -100,10 +121,13 @@ python3 -m http.server 8000
 ### Umbrella helpers
 
 - `RELEASE_METADATA`
+- `BUILT_IN_EXAMPLES`
 - `loadCurrentBenchmark()`
 - `validateCurrentBenchmark(bundle?)`
 - `buildCurrentBenchmarkSnapshot(bundle?)`
 - `loadValidatedCurrentBenchmark()`
+- `listBuiltInExamples()`
+- `renderBuiltInExample(exampleId, bundle?)`
 - `readCx004ValidationHandoff()`
 - `readCx004ValidationHandoffReceipt()`
 - `summarizeCx004ValidationHandoff(handoff, receipt?)`

@@ -41,7 +41,7 @@ npm install controller-benchmark
 
 Current verified package versions:
 
-- `controller-benchmark@0.1.3`
+- `controller-benchmark@0.1.4`
 - `controller-benchmark-data@0.1.5`
 - `controller-benchmark-js@0.1.3`
 - `controller-benchmark-schemas@0.1.2`
@@ -52,6 +52,18 @@ Package roles:
 - `controller-benchmark-data` carries the public benchmark bundle and readers.
 - `controller-benchmark-js` summarizes benchmark bundles and outputs.
 - `controller-benchmark-schemas` validates benchmark artifact contracts.
+
+CLI inspection:
+
+```bash
+npx controller-benchmark --list-examples
+npx controller-benchmark --example cx004
+npx controller-benchmark --example hazard-stop
+```
+
+The built-in examples are documentation surfaces, not biological proof. They
+show how the benchmark preserves contradiction, abstention, and hard safety
+blocks in concrete cases.
 
 ### Synapse
 

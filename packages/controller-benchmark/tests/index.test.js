@@ -1,16 +1,23 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { execFileSync } from "node:child_process";
+import { fileURLToPath } from "node:url";
 
 import {
   BUNDLE_ID,
+  BUILT_IN_EXAMPLES,
   CONDITION_RECORD_SCHEMA,
   RELEASE_METADATA,
   buildCurrentBenchmarkSnapshot,
   getSchema,
+  listBuiltInExamples,
   loadCurrentBenchmark,
   loadValidatedCurrentBenchmark,
+  renderBuiltInExample,
   validateCurrentBenchmark,
 } from "../src/index.js";
+
+const CLI_PATH = fileURLToPath(new URL("../bin/controller-benchmark.js", import.meta.url));
 
 test("release metadata stays aligned with the current public bundle", () => {
   assert.equal(RELEASE_METADATA.package_name, "controller-benchmark");
@@ -76,6 +83,68 @@ test("snapshot helper preserves fail-closed shell behavior", () => {
   );
   assert.equal(snapshot.recommendations.protocol_object_count, 8);
   assert.equal(snapshot.recommendations.live_recommendation_active_count, 0);
+});
+
+test("built-in example registry exposes cx004", () => {
+  assert.ok(BUILT_IN_EXAMPLES.some((row) => row.id === "cx004"));
+  assert.ok(BUILT_IN_EXAMPLES.some((row) => row.id === "hazard-stop"));
+  assert.ok(listBuiltInExamples().some((row) => row.id === "cx004"));
+  assert.ok(listBuiltInExamples().some((row) => row.id === "hazard-stop"));
+});
+
+test("cx004 example renderer explains the frozen contradiction path", () => {
+  const rendered = renderBuiltInExample("cx004");
+
+  assert.match(rendered, /VITA_CTRL_003/);
+  assert.match(rendered, /VITA_CTRL_005/);
+  assert.match(rendered, /handoff_verdict: cx004_validation_handoff_frozen/);
+  assert.match(rendered, /passive_scaffolding_only_live_recommendation_dormant/);
+});
+
+test("hazard-stop example renderer explains the hard preserve-block path", () => {
+  const rendered = renderBuiltInExample("hazard-stop");
+
+  assert.match(rendered, /VITA_CTRL_006/);
+  assert.match(rendered, /ohnishi_premature_termination_tumor_hazard/);
+  assert.match(rendered, /passive_posture: preserve_block/);
+  assert.match(
+    rendered,
+    /A direct hazard blocker is active, so the condition stays preserve-blocked/,
+  );
+});
+
+test("CLI help advertises built-in examples", () => {
+  const output = execFileSync(process.execPath, [CLI_PATH, "--help"], {
+    encoding: "utf8",
+  });
+
+  assert.match(output, /--example <id>/);
+  assert.match(output, /--list-examples/);
+  assert.match(output, /cx004/);
+  assert.match(output, /hazard-stop/);
+});
+
+test("CLI example command renders the cx004 walkthrough", () => {
+  const output = execFileSync(process.execPath, [CLI_PATH, "--example", "cx004"], {
+    encoding: "utf8",
+  });
+
+  assert.match(output, /controller-benchmark built-in example: cx004/);
+  assert.match(output, /Gill-side contradiction/);
+  assert.match(
+    output,
+    /The benchmark does not let stronger age movement outrank unresolved identity and risk\./,
+  );
+});
+
+test("CLI example command renders the hazard-stop walkthrough", () => {
+  const output = execFileSync(process.execPath, [CLI_PATH, "--example", "hazard-stop"], {
+    encoding: "utf8",
+  });
+
+  assert.match(output, /controller-benchmark built-in example: hazard-stop/);
+  assert.match(output, /passive_posture: preserve_block/);
+  assert.match(output, /controller_hazard_blocked_conditions/);
 });
 
 test("validated loader composes benchmark, validation, and snapshot", () => {

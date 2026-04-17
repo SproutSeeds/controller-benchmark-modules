@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.4 - 2026-04-17
+
+- add a `controller-benchmark` CLI with `--help`, `--list-examples`, and
+  `--example <id>`
+- add a built-in `cx004` walkthrough renderer so users can inspect the concrete
+  Gill-versus-Olova contradiction path directly from the released package
+- add a built-in `hazard-stop` walkthrough renderer so users can inspect a
+  hard preserve-block case from the released package
+
 ## 0.1.3 - 2026-04-14
 
 - update published package metadata for the retinal longevity controller
