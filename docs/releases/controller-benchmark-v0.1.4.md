@@ -2,9 +2,17 @@
 
 Date: 2026-04-17
 
-This release is the first public GitHub release candidate for the retinal
+This release is the first public GitHub and Zenodo release for the retinal
 longevity controller benchmark surface after the `controller-benchmark@0.1.4`
 npm CLI walkthrough release.
+
+Versioned DOI:
+
+- `10.5281/zenodo.19633942`
+
+Concept DOI:
+
+- `10.5281/zenodo.19633941`
 
 ## What Is New
 

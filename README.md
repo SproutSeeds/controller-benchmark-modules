@@ -1,5 +1,7 @@
 # Retinal Longevity Controller Benchmarks
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19633942.svg)](https://doi.org/10.5281/zenodo.19633942)
+
 Published by SproutSeeds. Research stewardship: Fractal Research Group
 ([frg.earth](https://frg.earth)).
 
@@ -94,8 +96,16 @@ to reopen a tumor-hazard family.
 
 ## Citation And Archival Metadata
 
-Citation metadata is available in `CITATION.cff`. DOI-ready Zenodo metadata is
-available in `.zenodo.json` for the next archival release path.
+Versioned Zenodo DOI:
+
+- `10.5281/zenodo.19633942`
+
+Concept DOI for future versions:
+
+- `10.5281/zenodo.19633941`
+
+Citation metadata is available in `CITATION.cff`. Zenodo metadata is available
+in `.zenodo.json`.
 
 ## Install Targets
 

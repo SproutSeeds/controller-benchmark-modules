@@ -4,6 +4,7 @@ type: software
 title: "Retinal Longevity Controller Benchmarks"
 version: 0.1.4
 date-released: "2026-04-17"
+doi: "10.5281/zenodo.19633942"
 authors:
   - family-names: "Mitchell"
     given-names: "Cody"
@@ -11,7 +12,14 @@ authors:
   - name: "Fractal Research Group"
   - name: "SproutSeeds"
 repository-code: "https://github.com/SproutSeeds/retinal-longevity-controller-benchmarks"
-url: "https://github.com/SproutSeeds/retinal-longevity-controller-benchmarks"
+url: "https://doi.org/10.5281/zenodo.19633942"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.19633942"
+    description: "Versioned Zenodo DOI for controller-benchmark-v0.1.4"
+  - type: doi
+    value: "10.5281/zenodo.19633941"
+    description: "Zenodo concept DOI for all versions"
 abstract: >-
   Public benchmark and package surface for a safety-first retinal longevity
   controller that evaluates lineage-preserving restoration signals through
