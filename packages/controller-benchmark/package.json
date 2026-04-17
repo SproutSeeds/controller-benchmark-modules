@@ -15,7 +15,7 @@
   "type": "module",
   "main": "./src/index.js",
   "bin": {
-    "controller-benchmark": "./bin/controller-benchmark.js"
+    "controller-benchmark": "bin/controller-benchmark.js"
   },
   "sideEffects": false,
   "exports": {
