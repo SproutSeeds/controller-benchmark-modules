@@ -92,6 +92,11 @@ Use `cx004` to inspect the Gill-versus-Olova contradiction path. Use
 `hazard-stop` to inspect a hard preserve-block case where the controller refuses
 to reopen a tumor-hazard family.
 
+## Citation And Archival Metadata
+
+Citation metadata is available in `CITATION.cff`. DOI-ready Zenodo metadata is
+available in `.zenodo.json` for the next archival release path.
+
 ## Install Targets
 
 ```bash
