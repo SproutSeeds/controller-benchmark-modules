@@ -2,6 +2,7 @@
   "title": "Retinal Longevity Controller Benchmarks",
   "upload_type": "software",
   "publication_date": "2026-04-17",
+  "version": "controller-benchmark-v0.1.4",
   "description": "Public benchmark and package surface for a safety-first retinal longevity controller. The repository exposes reusable benchmark infrastructure, package metadata, and concrete CLI walkthroughs for contradiction preservation, abstention, and hard safety-stop behavior. It does not claim therapy readiness, clinical recommendation, or solved biology.",
   "creators": [
     {
@@ -32,6 +33,11 @@
     },
     {
       "identifier": "https://www.npmjs.com/package/controller-benchmark/v/0.1.4",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/SproutSeeds/retinal-longevity-controller-benchmarks/releases/tag/controller-benchmark-v0.1.4",
       "relation": "isSupplementTo",
       "scheme": "url"
     }
