@@ -2,13 +2,16 @@
 
 Date: 2026-04-11
 
+Updated: 2026-04-20
+
 ## Purpose
 
 This is the public front door for the currently released retinal and ocular
 longevity controller and benchmark surfaces.
 
-It connects the public GitHub package repo, npm packages, and Synapse artifact
-shelves in one place, while keeping the claim boundary explicit.
+It connects the public GitHub package repo, npm packages, Synapse artifact
+shelves, one-page public brief, and Zenodo DOI in one place, while keeping the
+claim boundary explicit.
 
 The mission context is safety-first lineage-preserving rejuvenation: build
 controller infrastructure that can evaluate whether a candidate partial
@@ -22,6 +25,15 @@ research.
 
 ## Public Starting Points
 
+### One-Page Brief
+
+Shortest showable overview:
+
+- [Ocular Longevity Controller One-Page Public Brief v0](ocular-longevity-controller-one-page-v0.md)
+
+Use this when a host, collaborator, funder, or reviewer needs the project in
+one fast pass.
+
 ### GitHub
 
 Public package and module repo:
@@ -30,6 +42,16 @@ Public package and module repo:
 
 This repo is the public code/package surface. It is not the full internal
 research workspace.
+
+### DOI
+
+Versioned Zenodo DOI:
+
+- https://doi.org/10.5281/zenodo.19633942
+
+Concept DOI for future versions:
+
+- https://doi.org/10.5281/zenodo.19633941
 
 ### npm
 
@@ -134,6 +156,25 @@ Role:
 - make the benchmark artifacts easier to validate, inspect, and reuse
 - keep provenance and trust boundaries machine-readable
 
+### One-page public brief
+
+The one-page brief exposes the project in a host/funder/reviewer-friendly
+shape:
+
+- object
+- why it matters
+- what exists now
+- what the examples show
+- near-term research path
+- what we need
+- explicit non-claims
+- clean ask
+
+Role:
+
+- make the project usable in outreach without exposing private planning,
+  provider, inbox, or negotiation context
+
 ## Current Claim Boundary
 
 The public surfaces support this bounded statement:
@@ -171,25 +212,26 @@ Not included here:
 
 As of this index:
 
-- there is no Zenodo DOI for the ocular/controller public shelf
 - there is no Hugging Face dataset or model card for the public bundle
 - there is no separate public ocular-only GitHub repo
 - the main internal `longevity-research` workspace remains private
+- there is no wet-lab result or provider-selection result in the public shelf
 
 ## Recommended Next Public Hardening
 
 The next public hardening pass should be:
 
-1. create an immutable Zenodo record for the public shelf or package release
-2. add a Hugging Face dataset card only if we want a dataset-native mirror
-3. publish a public GitHub release from this repo, not the private workspace
-4. keep npm releases aligned with the public README and package docs
-5. add a short "How to cite / how to inspect" section after the DOI exists
+1. keep npm releases aligned with the public README and package docs
+2. publish a GitHub release from this repo, not the private workspace
+3. add a Hugging Face dataset card only if we want a dataset-native mirror
+4. add a short "How to cite / how to inspect" section to each package README
+5. keep public language centered on evidence boundaries, not therapy claims
 
-## Citation Until DOI
+## Citation
 
-Until a DOI exists, cite the exact public surfaces:
+Cite the exact public surfaces:
 
+- DOI: https://doi.org/10.5281/zenodo.19633942
 - GitHub: https://github.com/SproutSeeds/retinal-longevity-controller-benchmarks
 - Synapse benchmark pack: https://www.synapse.org/Synapse:syn74252747
 - Synapse world-share pack: https://www.synapse.org/Synapse:syn74260927
