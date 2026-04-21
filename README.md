@@ -30,6 +30,10 @@ metadata, continue here:
 
 - [Retinal Longevity Controller Public Index v0](docs/ocular-controller-public-index-v0.md)
 
+If you already know your role and need the right next action, use:
+
+- [Ocular Controller Public Use Router v0](docs/ocular-public-use-router-v0.md)
+
 Together, those pages tie together:
 
 - this public GitHub package repo
@@ -39,6 +43,7 @@ Together, those pages tie together:
 - the public Synapse ocular benchmark pack
 - the public Synapse ocular world-share pack
 - the Zenodo DOI
+- role-specific reader actions and useful reply types
 - the exact public claim boundaries
 
 ## Packages

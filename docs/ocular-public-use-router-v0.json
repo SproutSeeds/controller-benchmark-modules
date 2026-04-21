@@ -1,0 +1,125 @@
+{
+  "artifact_name": "controller-ocular-public-use-router-v0",
+  "canonical_public_surfaces": {
+    "doi": "https://doi.org/10.5281/zenodo.19633942",
+    "one_page": "https://github.com/SproutSeeds/retinal-longevity-controller-benchmarks/blob/main/docs/ocular-longevity-controller-one-page-v0.md",
+    "public_index": "https://github.com/SproutSeeds/retinal-longevity-controller-benchmarks/blob/main/docs/ocular-controller-public-index-v0.md",
+    "repo": "https://github.com/SproutSeeds/retinal-longevity-controller-benchmarks",
+    "synapse_index": "https://www.synapse.org/Synapse:syn74531916"
+  },
+  "date": "2026-04-21",
+  "global_boundaries": [
+    "research infrastructure only",
+    "no medical advice",
+    "no clinical decision support",
+    "no therapy-readiness claim",
+    "no claim that public data closes the human validation gap"
+  ],
+  "purpose": "Route outside readers to the right public ocular controller surface without asking them to infer the next action from scattered artifacts.",
+  "routes": [
+    {
+      "audience": "busy reviewer, funder, or host",
+      "do_not_infer": [
+        "therapy readiness",
+        "human intervention truth",
+        "clinical utility"
+      ],
+      "public_link": "https://github.com/SproutSeeds/retinal-longevity-controller-benchmarks/blob/main/docs/ocular-longevity-controller-one-page-v0.md",
+      "route_id": "reader_quick_start",
+      "start_here": "one-page public brief",
+      "useful_reply_or_receipt": "routing signal, reviewer willingness, or funder/host fit note",
+      "what_to_do": [
+        "Read the one-page brief before opening the larger shelf.",
+        "Decide whether the useful response is review, host routing, funding fit, or data referral."
+      ]
+    },
+    {
+      "audience": "benchmark or ML builder",
+      "commands": [
+        "npx controller-benchmark --help",
+        "npx controller-benchmark --example cx004",
+        "npx controller-benchmark --example hazard-stop"
+      ],
+      "do_not_infer": [
+        "the example outputs are biological proof",
+        "the benchmark is a clinical product"
+      ],
+      "public_link": "https://github.com/SproutSeeds/retinal-longevity-controller-benchmarks",
+      "route_id": "benchmark_builder",
+      "start_here": "public benchmark repository and CLI examples",
+      "useful_reply_or_receipt": "issue, pull request, reproducibility note, or schema critique",
+      "what_to_do": [
+        "Install or inspect the controller benchmark packages.",
+        "Run the CX-004 and hazard-stop examples to see contradiction and safety-block behavior.",
+        "Pressure-test whether the schema preserves abstention, blocked claims, and missing anchors."
+      ]
+    },
+    {
+      "audience": "vision scientist or ocular atlas/data expert",
+      "do_not_infer": [
+        "adult RGC restoration is solved",
+        "support-only evidence closes the human validation gap"
+      ],
+      "public_link": "https://github.com/SproutSeeds/retinal-longevity-controller-benchmarks/blob/main/docs/ocular-controller-public-index-v0.md",
+      "route_id": "vision_researcher",
+      "start_here": "public artifact index",
+      "useful_reply_or_receipt": "dataset referral, boundary correction, or supervised review note",
+      "what_to_do": [
+        "Check whether the data-role labels and blocked claims match the ocular evidence you know.",
+        "Point to better human ocular datasets, contradiction cases, or validation surfaces.",
+        "Challenge whether any support-only evidence is being promoted too far."
+      ]
+    },
+    {
+      "audience": "eligible host, collaborator, funder, or program officer",
+      "do_not_infer": [
+        "FRG eligibility is already resolved",
+        "new human data collection is part of the current R21 shape",
+        "the project is asking for clinical activity"
+      ],
+      "public_link": "https://doi.org/10.5281/zenodo.19633942",
+      "route_id": "eligible_host_or_funder",
+      "start_here": "one-page public brief plus DOI",
+      "useful_reply_or_receipt": "eligible-host path, program-fit answer, or referral",
+      "what_to_do": [
+        "Evaluate whether this fits a secondary-data ocular methods project.",
+        "Route us toward an eligible host, collaborator, or funding mechanism if FRG cannot apply directly.",
+        "Assess whether the output should be a public evidence-boundary layer rather than a therapy claim."
+      ]
+    },
+    {
+      "audience": "wet-lab, sequencing, or analytical assay provider",
+      "do_not_infer": [
+        "the public shelf is a wet-lab protocol",
+        "the provider work is patient-facing",
+        "a broad discovery package is preferred over a narrow missing-data tranche"
+      ],
+      "public_link": "https://www.synapse.org/Synapse:syn74531916",
+      "route_id": "provider_or_wet_lab",
+      "start_here": "public index for background only",
+      "useful_reply_or_receipt": "capability matrix, quote range, referral, or scope correction",
+      "what_to_do": [
+        "Use the public shelf only to understand the controller boundary.",
+        "Quote only the narrow missing-measurement tranche requested in the private provider packet.",
+        "Separate data generation from state adjudication if your service cannot provide both."
+      ]
+    },
+    {
+      "audience": "independent researcher or careful public reader",
+      "do_not_infer": [
+        "personal medical advice",
+        "treatment direction",
+        "clinical decision support"
+      ],
+      "public_link": "https://github.com/SproutSeeds/retinal-longevity-controller-benchmarks/blob/main/docs/ocular-controller-public-index-v0.md",
+      "route_id": "independent_builder",
+      "start_here": "claim boundary and public index",
+      "useful_reply_or_receipt": "public issue, boundary question, or reproducibility note",
+      "what_to_do": [
+        "Use the shelf as a map of evidence roles, not as permission to make intervention claims.",
+        "Reuse the examples to practice claim-boundary logic.",
+        "Open a public issue or note if a boundary is unclear or misleading."
+      ]
+    }
+  ]
+}

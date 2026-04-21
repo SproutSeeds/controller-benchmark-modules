@@ -34,6 +34,18 @@ Shortest showable overview:
 Use this when a host, collaborator, funder, or reviewer needs the project in
 one fast pass.
 
+### Public Use Router
+
+Role-based route map:
+
+- [Ocular Controller Public Use Router v0](ocular-public-use-router-v0.md)
+- [Machine-readable JSON](ocular-public-use-router-v0.json)
+
+Use this when you already know whether you are reading as a reviewer, benchmark
+builder, vision researcher, eligible host/funder, provider, or independent
+builder and want the right starting surface, useful response type, and claim
+boundary.
+
 ### GitHub
 
 Public package and module repo:
